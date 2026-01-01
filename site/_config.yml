@@ -1,4 +1,4 @@
-title: Vonge
+title: Vimal Portfolio & Blog
 
 plugins:
   - jekyll-bookshop
@@ -22,7 +22,7 @@ collections_dir: 'collections'
 collections:
   pages:
     output: true
-    permalink: /:title
+    permalink: /:title/
   projects:
     output: true
     permalink: /project/:slug
