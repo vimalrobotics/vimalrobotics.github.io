@@ -6,3 +6,5 @@ menu__settings:
       url: '/'
     - title: 'Projects'
       url: '/projects/'
+    - title: 'About'
+      url: '/about/'

@@ -3,13 +3,12 @@ spec:
   structures:
     - content_blocks
   label: Hero
-  description: Academic-style page hero with research focus and navigation
-  icon: school
+  description: Page hero with the heading, description, buttons, and an image
+  icon: wysiwyg
   tags:
     - Structure
-    - Research
-    - Robotics
-    - Navigation
+    - Text
+    - Links
 
 # Defines the structure of this component, as well as the default values
 blueprint:
@@ -24,18 +23,17 @@ blueprint:
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
-  title: Hi there, I am Vimal
-  description_html: >
-    Robotics Engineer specializing in <strong>ROS-based autonomous systems</strong>,
-    <strong>embedded robotics</strong>, and <strong>human-centric intelligent machines</strong>.
-    My work spans mobile robotics, perception, control, and real-world deployment,
-    with a focus on building reliable systems that bridge research and practice.
-  image: /images/projects/stormbreaker/cover.jpg
-  image_alt: Autonomous assistive robot prototype
-  cta_button: View Timeline
-  cta_button_link: "/timeline/"
-  works_button: Selected Projects
-  works_button_link: "/projects/"
+  title: Hi there, I am Vanessa Marley
+  description_html: <strong>Photographer</strong> and <strong>Visual Content
+    Strategist</strong> from Albany. I work as a lifestyle, product, and
+    landscape photographer, creating images for a diverse range of requests,
+    from online media to printed artwork.
+  image: /images/01.jpg
+  image_alt: Vanessa Marley's picture
+  cta_button: Get in touch
+  cta_button_link: "#contact"
+  works_button: See my works
+  works_button_link: "#projects"
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs: {}
