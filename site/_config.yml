@@ -26,11 +26,6 @@ collections:
   projects:
     output: true
     permalink: /project/:slug
-  testimonials:
-    output: false
-  posts:
-    output: true
-    permalink: /blog/:slug
 
 defaults:
   - scope:
@@ -46,10 +41,6 @@ defaults:
       type: projects
     values:
       layout: project
-  - scope:
-      type: posts
-    values:
-      layout: post
 
 # Tags
 tag_page_dir: tag
