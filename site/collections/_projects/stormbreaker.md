@@ -2,7 +2,7 @@
 date: 2023-03-15
 title: Stormbreaker
 subtitle: Assistive Autonomous Towing Robot (ROS)
-image: '/images/strombreaker_cover.jpg'
+image: '/images/project_1.jpg'
 ---
 
 ## Overview
@@ -73,7 +73,7 @@ Safety considerations included:
 - Predictable motion behavior
 - Robust recovery from localization loss
 
-![Stormbreaker Navigation in RViz](/images/projects/stormbreaker/rviz.png)
+![Stormbreaker Navigation in RViz](/images/rviz.png)
 
 These constraints shaped both the mechanical design and the control algorithms.
 
@@ -88,6 +88,9 @@ The system was validated through:
 
 Stormbreaker demonstrated consistent navigation performance and safe towing
 behavior under real-world conditions.
+
+![Stormbreaker](/images/strombreaker.jpg)
+![Stormbreaker Parts](/images/parts.jpeg)
 
 ---
 
