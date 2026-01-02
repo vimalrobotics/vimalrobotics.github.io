@@ -90,7 +90,6 @@ Stormbreaker demonstrated consistent navigation performance and safe towing
 behavior under real-world conditions.
 
 ![Stormbreaker](/images/strombreaker.jpg)
-![Stormbreaker Parts](/images/parts.jpeg)
 
 ---
 
