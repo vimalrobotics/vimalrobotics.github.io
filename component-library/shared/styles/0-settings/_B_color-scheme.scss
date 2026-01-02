@@ -1,29 +1,30 @@
-/* Color Scheme */
-$primary-color: #a75614;
-$secondary-color: #e01616;
-$white: #fff;
-$dark: #220b0b;
-$gray: #4d4b4b;
-$light-gray: #b9b9b9;
-$blue-gray: #75899e;
+/* Color Scheme – Urban Denim */
 
-$background-color: #f5c3a1;
+$primary-color: #1f3a5f;        // Deep denim blue (matches jacket)
+$secondary-color: #0f172a;      // Near-black navy (hoodie tone)
+
+$white: #ffffff;
+$dark: #0b0f14;                 // Rich black, not pure black
+$gray: #3a3f45;                 // Charcoal gray
+$light-gray: #9aa3ad;           // Cool light gray
+$blue-gray: #64748b;            // Slate blue-gray
+
+$background-color: #f4f6f8;     // Clean neutral background
 $background-color-alt: $white;
 
 $text-color: $dark;
+$heading-font-color: $dark;
 
-$heading-font-color: $text-color;
+$link-color: $primary-color;
+$link-color-hover: lighten($primary-color, 8%);
 
-$link-color: $text-color;
-$link-color-hover: $text-color;
-
-$button-color: $background-color-alt;
+$button-color: $white;
 $button-background-color: $primary-color;
-$button-background-hover: darken($primary-color, 5%);
+$button-background-hover: lighten($primary-color, 6%);
 
 $border-color: $blue-gray;
 
-$hr-color: $text-color;
-$tr-color: #f0f0f0;
+$hr-color: $blue-gray;
+$tr-color: #eef1f4;
 
-$syntax-highlighting-background: #f3f3f3;
+$syntax-highlighting-background: #0f172a; // Dark code block (modern dev look)
