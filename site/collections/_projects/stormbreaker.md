@@ -2,7 +2,7 @@
 date: 2023-03-15
 title: Stormbreaker
 subtitle: Assistive Autonomous Towing Robot (ROS)
-image: '/images/project_1.jpg'
+image: '/images/strombreaker_cover.jpg'
 ---
 
 ## Overview
@@ -90,7 +90,6 @@ Stormbreaker demonstrated consistent navigation performance and safe towing
 behavior under real-world conditions.
 
 ![Stormbreaker](/images/strombreaker.jpg)
-
 ---
 
 ## Research Contribution
