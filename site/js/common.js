@@ -148,49 +148,42 @@ document.addEventListener("DOMContentLoaded", function () {
    ============================ */
 
   const projectGroups = document.querySelectorAll(".projects-group");
-  const navButtons = document.querySelectorAll(".projects-category-nav .button");
-  const indicator = document.querySelector(".projects-category-nav .nav-indicator");
+  const navLinks = document.querySelectorAll(".projects-category-nav .button");
+  const indicator = document.querySelector(".nav-indicator");
 
-  if (projectGroups.length && navButtons.length) {
+  if (projectGroups.length) {
     const observer = new IntersectionObserver(
-      (entries) => {
-        // Pick the section closest to the top of viewport
-        const visibleSections = entries
-          .filter(entry => entry.isIntersecting)
-          .sort((a, b) => Math.abs(a.boundingClientRect.top) - Math.abs(b.boundingClientRect.top));
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const category = entry.target.dataset.category;
 
-        if (!visibleSections.length) return;
+            /* Highlight group */
+            projectGroups.forEach(g => g.classList.remove("is-active"));
+            entry.target.classList.add("is-active");
 
-        const activeEntry = visibleSections[0];
-        const category = activeEntry.target.dataset.category;
+            /* Highlight nav */
+            navLinks.forEach(link => {
+              const isActive = link.dataset.target === category;
+              link.classList.toggle("active", isActive);
 
-        /* Highlight group */
-        projectGroups.forEach(group => group.classList.remove("is-active"));
-        activeEntry.target.classList.add("is-active");
+              if (isActive && indicator) {
+                const linkRect = link.getBoundingClientRect();
+                const navRect = link.parentElement.getBoundingClientRect();
 
-        /* Highlight nav + move dot */
-        navButtons.forEach(btn => {
-          const isActive = btn.dataset.target === category;
-          btn.classList.toggle("active", isActive);
-
-          if (indicator && isActive) {
-            const offset =
-              btn.offsetTop +
-              btn.offsetHeight / 2 -
-              indicator.offsetHeight / 2;
-
-            indicator.style.transform = `translateY(${offset}px)`;
+                indicator.style.transform = `translateY(${linkRect.top - navRect.top + linkRect.height / 2 - 4}px)`;
+              }
+            });
           }
         });
       },
       {
-        root: null,                // viewport
-        threshold: [0.25, 0.5, 0.75],
-        rootMargin: "-20% 0px -60% 0px" // 👈 critical fix
+        root: null,
+        rootMargin: "-40% 0px -40% 0px", // 👈 KEY FIX
+        threshold: 0
       }
     );
 
     projectGroups.forEach(group => observer.observe(group));
   }
-
 });
