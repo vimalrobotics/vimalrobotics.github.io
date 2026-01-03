@@ -1,16 +1,79 @@
-/* ================================
-   FIX: Project Card Layout in Collage
-   ================================ */
+/* =====================================
+   Projects Collage – Apple-style Layout
+   Scoped: affects ONLY Projects page
+   ===================================== */
 
+/* ---------- Category Navigation ---------- */
+.projects-nav {
+  position: sticky;
+  top: 72px; /* below site header */
+  z-index: 10;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+
+  padding: 12px 0;
+  margin: 40px 0 56px;
+
+  background: $background-color-alt;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+
+  a {
+    padding: 8px 14px;
+    border-radius: 20px;
+    background: rgba(0,0,0,0.04);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all .2s ease;
+
+    &:hover {
+      background: rgba(0,0,0,0.08);
+    }
+
+    &.active {
+      background: #2563eb;
+      color: #fff;
+    }
+  }
+}
+
+/* ---------- Category Sections ---------- */
+.projects-collage {
+  margin-bottom: 80px;
+  scroll-margin-top: 120px; /* anchor offset */
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.collage-title {
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* ---------- Grid ---------- */
+.collage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* ---------- FIX Project Card Layout (Scoped) ---------- */
 .projects-collage .project-card {
   display: flex;
   flex-direction: column;
   height: auto;
   min-height: unset;
   max-width: 100%;
+  margin: 0;
 }
 
-/* Normalize card image */
+/* Image normalization */
 .projects-collage .project-card__image,
 .projects-collage .project-card img {
   width: 100%;
@@ -19,7 +82,7 @@
   border-radius: 12px;
 }
 
-/* Compact content */
+/* Content spacing */
 .projects-collage .project-card__content {
   padding: 14px 16px;
 }
@@ -31,8 +94,9 @@
   margin-bottom: 6px;
 
   display: -webkit-box;
-  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
   overflow: hidden;
 }
 
@@ -43,8 +107,9 @@
   opacity: 0.75;
 
   display: -webkit-box;
-  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
   overflow: hidden;
 }
 
