@@ -2,7 +2,7 @@
 date: 2023-03-15
 title: Stormbreaker
 subtitle: Assistive Autonomous Towing Robot (ROS)
-image: '/images/strombreaker_cover.jpg'
+image: '/images/strombreaker_ cover.jpg'
 category: research
 featured: true
 ---
