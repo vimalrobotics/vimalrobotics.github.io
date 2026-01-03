@@ -3,6 +3,8 @@ date: 2019-04-15
 title: IoT-Based PC Power Control System
 subtitle: Safe Embedded IoT Automation
 image: '/images/projects/iot-pc/cover.jpg'
+category: embedded-iot
+featured: false
 ---
 
 ## Overview

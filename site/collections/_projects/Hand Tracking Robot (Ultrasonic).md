@@ -3,6 +3,8 @@ date: 2018-11-02
 title: Hand Tracking Robot Using Ultrasonic Sensors
 subtitle: Sensor-Based Reactive Control
 image: '/images/projects/hand-tracking/cover.jpg'
+category: foundations
+featured: false
 ---
 
 ## Overview

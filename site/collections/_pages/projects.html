@@ -2,8 +2,42 @@
 title: Projects
 content_blocks:
   - _bookshop_name: page-heading
-    title: My works
-    description: I show only my best works built completely with passion, simplicity, and creativity!
-  - _bookshop_name: projects-list
-    show_projects: true
+    title: My Works
+    description: Categorized overview of engineering, robotics, and research projects
 ---
+
+{% assign research = site.projects | where: "category", "research" %}
+{% assign robotics = site.projects | where: "category", "robotics" %}
+{% assign mechatronics = site.projects | where: "category", "mechatronics" %}
+{% assign embedded = site.projects | where: "category", "embedded-iot" %}
+{% assign foundations = site.projects | where: "category", "foundations" %}
+
+{% if research.size > 0 %}
+{% bookshop projects-section title="Research & Publications" %}
+  {% bookshop projects-list projects=research %}
+{% endbookshop %}
+{% endif %}
+
+{% if robotics.size > 0 %}
+{% bookshop projects-section title="Robotic Systems & Platforms" %}
+  {% bookshop projects-list projects=robotics %}
+{% endbookshop %}
+{% endif %}
+
+{% if mechatronics.size > 0 %}
+{% bookshop projects-section title="Mechatronics & Manipulation" %}
+  {% bookshop projects-list projects=mechatronics %}
+{% endbookshop %}
+{% endif %}
+
+{% if embedded.size > 0 %}
+{% bookshop projects-section title="Embedded Systems & IoT" %}
+  {% bookshop projects-list projects=embedded %}
+{% endbookshop %}
+{% endif %}
+
+{% if foundations.size > 0 %}
+{% bookshop projects-section title="Foundational & Early Projects" %}
+  {% bookshop projects-list projects=foundations %}
+{% endbookshop %}
+{% endif %}

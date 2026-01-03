@@ -3,6 +3,8 @@ date: 2024-02-12
 title: Vision-Guided SCARA Robot
 subtitle: Closed-Loop Visual Servoing
 image: '/images/projects/scara/cover.jpg'
+category: robotics
+featured: false
 ---
 
 ## Overview

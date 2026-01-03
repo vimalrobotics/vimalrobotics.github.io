@@ -3,6 +3,8 @@ date: 2024-12-10
 title: Real-Time Vision-Based Event Detection System
 subtitle: Computer Vision Triggered Automation
 image: '/images/projects/vision-events/cover.jpg'
+category: robotics
+featured: false
 ---
 
 ## Overview

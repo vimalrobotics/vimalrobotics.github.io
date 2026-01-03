@@ -3,6 +3,8 @@ date: 2020-08-20
 title: Face Detection Welcome System
 subtitle: Embedded Vision & Human Interaction
 image: '/images/projects/face-detection/cover.jpg'
+category: embedded-iot
+featured: false
 ---
 
 ## Overview

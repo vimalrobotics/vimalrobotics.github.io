@@ -3,6 +3,8 @@ date: 2021-03-18
 title: Adaptive Vacuum Gripper
 subtitle: Bio-Inspired Compliant Manipulation
 image: '/images/projects/gripper/cover.jpg'
+category: mechatronics
+featured: true
 ---
 
 ## Overview

@@ -3,6 +3,8 @@ date: 2024-11-01
 title: 6-DOF Motion Immersion Platform
 subtitle: Real-Time Motion Control Systems
 image: '/images/projects/motion-platform/cover.jpg'
+category: robotics
+featured: false
 ---
 
 ## Overview

@@ -3,6 +3,8 @@ date: 2018-06-10
 title: Servo-Based Record and Play Robot Arm
 subtitle: Embedded Actuation & Power Management
 image: '/images/servo_arm_cover.jpg'
+category: foundations
+featured: false
 ---
 
 ## Overview
