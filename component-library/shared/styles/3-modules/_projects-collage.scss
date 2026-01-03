@@ -1,38 +1,54 @@
-/* ===== Projects Page Enhancements ===== */
+/* ================================
+   FIX: Project Card Layout in Collage
+   ================================ */
 
-.projects-page {
-  max-height: calc(100vh - 160px);
+.projects-collage .project-card {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: unset;
+  max-width: 100%;
 }
 
-/* Scroll container */
-.projects-scroll {
-  scroll-snap-type: y mandatory;
-  overflow-y: auto;
-  max-height: calc(100vh - 220px);
-  padding-right: 8px;
+/* Normalize card image */
+.projects-collage .project-card__image,
+.projects-collage .project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
-/* Each category snaps into view */
-.projects-collage {
-  scroll-snap-align: start;
-  padding-top: 24px;
+/* Compact content */
+.projects-collage .project-card__content {
+  padding: 14px 16px;
 }
 
-/* Active nav highlight */
-.projects-nav a.active {
-  background: #2563eb;
-  color: #fff;
+/* Title clamp */
+.projects-collage .project-card__title {
+  font-size: 16px;
+  line-height: 1.3;
+  margin-bottom: 6px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-/* Reduce vertical footprint */
-.collage-title {
-  margin-bottom: 16px;
-  font-size: 24px;
+/* Subtitle clamp */
+.projects-collage .project-card__subtitle {
+  font-size: 13px;
+  line-height: 1.4;
+  opacity: 0.75;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-/* Grid already correct, just reinforce */
-.collage-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 20px;
+/* Hover polish */
+.projects-collage .project-card:hover {
+  transform: translateY(-4px);
 }
