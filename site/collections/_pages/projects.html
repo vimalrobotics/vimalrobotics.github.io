@@ -2,42 +2,36 @@
 title: Projects
 content_blocks:
   - _bookshop_name: page-heading
-    title: My Works
-    description: Categorized overview of engineering, robotics, and research projects
+    title: Projects
+    description: Categorized overview of my robotics and research work
 ---
 
-{% assign research = site.projects | where: "category", "research" %}
-{% assign robotics = site.projects | where: "category", "robotics" %}
-{% assign mechatronics = site.projects | where: "category", "mechatronics" %}
-{% assign embedded = site.projects | where: "category", "embedded-iot" %}
-{% assign foundations = site.projects | where: "category", "foundations" %}
+{% bookshop projects-section
+  title="Research & Publications"
+  category="research"
+  show_projects=true
+%}
 
-{% if research.size > 0 %}
-{% bookshop projects-section title="Research & Publications" %}
-  {% bookshop projects-list projects=research %}
-{% endbookshop %}
-{% endif %}
+{% bookshop projects-section
+  title="Robotics Systems"
+  category="robotics"
+  show_projects=true
+%}
 
-{% if robotics.size > 0 %}
-{% bookshop projects-section title="Robotic Systems & Platforms" %}
-  {% bookshop projects-list projects=robotics %}
-{% endbookshop %}
-{% endif %}
+{% bookshop projects-section
+  title="Mechatronics & Manipulation"
+  category="mechatronics"
+  show_projects=true
+%}
 
-{% if mechatronics.size > 0 %}
-{% bookshop projects-section title="Mechatronics & Manipulation" %}
-  {% bookshop projects-list projects=mechatronics %}
-{% endbookshop %}
-{% endif %}
+{% bookshop projects-section
+  title="Embedded Systems & IoT"
+  category="embedded-iot"
+  show_projects=true
+%}
 
-{% if embedded.size > 0 %}
-{% bookshop projects-section title="Embedded Systems & IoT" %}
-  {% bookshop projects-list projects=embedded %}
-{% endbookshop %}
-{% endif %}
-
-{% if foundations.size > 0 %}
-{% bookshop projects-section title="Foundational & Early Projects" %}
-  {% bookshop projects-list projects=foundations %}
-{% endbookshop %}
-{% endif %}
+{% bookshop projects-section
+  title="Foundational Projects"
+  category="foundations"
+  show_projects=true
+%}
