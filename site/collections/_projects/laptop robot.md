@@ -4,7 +4,7 @@ title: Laptop-Based Educational Robot Platform
 subtitle: Open-Source Robotics Education
 image: '/images/projects/education-robot/cover.jpg'
 category: research
-featured: false
+featured: true
 ---
 
 ## Overview

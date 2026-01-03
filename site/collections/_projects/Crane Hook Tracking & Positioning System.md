@@ -4,7 +4,7 @@ title: Crane Hook Tracking and Positioning System
 subtitle: Autonomous Stabilization & Sensing
 image: '/images/projects/crane-hook/cover.jpg'
 category: mechatronics
-featured: true
+featured: false
 ---
 
 ## Overview

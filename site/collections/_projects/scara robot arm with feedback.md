@@ -4,7 +4,7 @@ title: Vision-Guided SCARA Robot
 subtitle: Closed-Loop Visual Servoing
 image: '/images/projects/scara/cover.jpg'
 category: robotics
-featured: false
+featured: true
 ---
 
 ## Overview

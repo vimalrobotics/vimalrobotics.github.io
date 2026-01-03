@@ -4,7 +4,7 @@ title: Stormbreaker
 subtitle: Assistive Autonomous Towing Robot (ROS)
 image: '/images/strombreaker_cover.jpg'
 category: research
-featured: yes
+featured: true
 ---
 
 ## Overview
