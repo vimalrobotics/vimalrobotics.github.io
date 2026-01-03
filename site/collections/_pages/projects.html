@@ -7,33 +7,26 @@ layout: default
 
   {% bookshop page-heading
     title="Projects"
-    description="A categorized overview of my robotics, embedded systems, and research work."
+    description="A curated selection of my research, robotics, and embedded systems work."
   %}
 
-  <!-- Category Navigation -->
-  <nav class="projects-nav">
-    <a href="#research" data-target="research">Research</a>
-    <a href="#robotics" data-target="robotics">Robotics</a>
-    <a href="#mechatronics" data-target="mechatronics">Mechatronics</a>
-    <a href="#embedded" data-target="embedded">Embedded & IoT</a>
-    <a href="#foundations" data-target="foundations">Foundations</a>
-  </nav>
+  <!-- ===== Research ===== -->
+  <section class="projects-group">
+    <h2 class="group-title">Research & Publications</h2>
 
-  <!-- Research -->
-  <section id="research" class="projects-collage" data-category="research">
-    <h2 class="collage-title">Research & Publications</h2>
-    <div class="collage-grid">
-      {% assign research = site.projects | where: "category", "research" %}
-      {% for project in research %}
+    {% assign research = site.projects | where: "category", "research" %}
+    {% for project in research %}
+      <div class="project-highlight">
         {% bookshop project-card project=project %}
-      {% endfor %}
-    </div>
+      </div>
+    {% endfor %}
   </section>
 
-  <!-- Robotics -->
-  <section id="robotics" class="projects-collage" data-category="robotics">
-    <h2 class="collage-title">Robotics Systems</h2>
-    <div class="collage-grid">
+  <!-- ===== Robotics ===== -->
+  <section class="projects-group">
+    <h2 class="group-title">Robotics Systems</h2>
+
+    <div class="projects-row">
       {% assign robotics = site.projects | where: "category", "robotics" %}
       {% for project in robotics %}
         {% bookshop project-card project=project %}
@@ -41,10 +34,11 @@ layout: default
     </div>
   </section>
 
-  <!-- Mechatronics -->
-  <section id="mechatronics" class="projects-collage" data-category="mechatronics">
-    <h2 class="collage-title">Mechatronics & Manipulation</h2>
-    <div class="collage-grid">
+  <!-- ===== Mechatronics ===== -->
+  <section class="projects-group">
+    <h2 class="group-title">Mechatronics & Manipulation</h2>
+
+    <div class="projects-row">
       {% assign mechatronics = site.projects | where: "category", "mechatronics" %}
       {% for project in mechatronics %}
         {% bookshop project-card project=project %}
@@ -52,23 +46,13 @@ layout: default
     </div>
   </section>
 
-  <!-- Embedded -->
-  <section id="embedded" class="projects-collage" data-category="embedded">
-    <h2 class="collage-title">Embedded Systems & IoT</h2>
-    <div class="collage-grid">
+  <!-- ===== Embedded ===== -->
+  <section class="projects-group">
+    <h2 class="group-title">Embedded Systems & IoT</h2>
+
+    <div class="projects-row compact">
       {% assign embedded = site.projects | where: "category", "embedded-iot" %}
       {% for project in embedded %}
-        {% bookshop project-card project=project %}
-      {% endfor %}
-    </div>
-  </section>
-
-  <!-- Foundations -->
-  <section id="foundations" class="projects-collage" data-category="foundations">
-    <h2 class="collage-title">Foundational Projects</h2>
-    <div class="collage-grid">
-      {% assign foundations = site.projects | where: "category", "foundations" %}
-      {% for project in foundations %}
         {% bookshop project-card project=project %}
       {% endfor %}
     </div>
