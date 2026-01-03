@@ -6,38 +6,29 @@
 /* ---------- Category Navigation ---------- */
 .projects-nav {
   position: sticky;
-  top: 72px; /* below site header */
+  top: 72px;
   z-index: 10;
 
   display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
+  gap: 12px;
   justify-content: center;
+  flex-wrap: wrap;
 
-  padding: 12px 0;
-  margin: 40px 0 56px;
+  margin: 32px 0 48px;
+  padding: 0;
+}
 
-  background: $background-color-alt;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
+/* Use existing button look */
+.projects-nav a {
+  @extend .button;
+  font-size: 14px;
+  padding: 6px 14px;
+}
 
-  a {
-    padding: 8px 14px;
-    border-radius: 20px;
-    background: rgba(0,0,0,0.04);
-    font-size: 14px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: all .2s ease;
-
-    &:hover {
-      background: rgba(0,0,0,0.08);
-    }
-
-    &.active {
-      background: #2563eb;
-      color: #fff;
-    }
-  }
+/* Active state */
+.projects-nav a.active {
+  background: $primary-color;
+  color: #fff;
 }
 
 /* ---------- Category Sections ---------- */
@@ -59,35 +50,44 @@
 /* ---------- Grid ---------- */
 .collage-grid {
   display: grid;
+  width: 100%
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 24px;
 }
 
 /* ---------- FIX Project Card Layout (Scoped) ---------- */
+
 .projects-collage .project-card {
   display: flex;
   flex-direction: column;
+  width: 100%;
   height: auto;
-  min-height: unset;
-  max-width: 100%;
   margin: 0;
 }
 
-/* Image normalization */
-.projects-collage .project-card__image,
-.projects-collage .project-card img {
+/* Correct image wrapper used by theme */
+.projects-collage .project-card__image-link {
+  display: block;
   width: 100%;
   height: 180px;
-  object-fit: cover;
+  overflow: hidden;
   border-radius: 12px;
 }
 
-/* Content spacing */
+/* Actual image */
+.projects-collage .project-card__image-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Content */
 .projects-collage .project-card__content {
   padding: 14px 16px;
 }
 
-/* Title clamp */
+/* Title */
 .projects-collage .project-card__title {
   font-size: 16px;
   line-height: 1.3;
@@ -100,11 +100,10 @@
   overflow: hidden;
 }
 
-/* Subtitle clamp */
+/* Subtitle */
 .projects-collage .project-card__subtitle {
   font-size: 13px;
-  line-height: 1.4;
-  opacity: 0.75;
+  opacity: 0.7;
 
   display: -webkit-box;
   -webkit-box-orient: vertical;
