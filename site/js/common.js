@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
       })
     }
   });
-  
+
   /* ============================
   // Projects Page: Category Highlight
   // (Runs ONLY on Projects page)
@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       },
       {
-        root: projectsScroll,
+        root: null,
         threshold: 0.45
       }
     );
