@@ -1,6 +1,44 @@
 /* =====================================
-   Projects Group Highlight (Minimal)
+   Projects Page – Left Navigation Layout
    ===================================== */
+
+.projects-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 48px;
+}
+
+/* Sidebar */
+.projects-sidebar {
+  position: relative;
+}
+
+/* Sticky nav */
+.projects-category-nav {
+  position: sticky;
+  top: 96px; /* below header */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Button theme already applied */
+.projects-category-nav .button {
+  justify-content: flex-start;
+}
+
+/* Active category */
+.projects-category-nav .button.active {
+  background-color: $primary-color;
+  color: #fff;
+}
+
+/* Main content */
+.projects-content {
+  min-width: 0;
+}
+
+/* ===== Group Highlight ===== */
 
 .projects-group {
   padding: 32px 24px;
@@ -9,40 +47,27 @@
   transition: all 0.3s ease;
 }
 
-/* Title */
-.group-title {
-  font-size: 26px;
-  font-weight: 600;
-  margin-bottom: 24px;
-}
-
-/* Active group highlight */
 .projects-group.is-active {
   outline: 2px solid rgba($primary-color, 0.25);
   background: rgba($primary-color, 0.03);
   box-shadow: 0 12px 32px rgba(0,0,0,0.06);
 }
 
-/* =====================================
-   Static Project Category Navigation
-   ===================================== */
-
-.projects-category-nav {
-  position: sticky;
-  top: 72px; /* below main header */
-  z-index: 15;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-
-  margin: 24px 0 48px;
-  padding: 8px 0;
+.group-title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 24px;
 }
 
-/* Active state (set via JS) */
-.projects-category-nav .button.active {
-  background-color: $primary-color;
-  color: #fff;
+/* ===== Responsive ===== */
+@media (max-width: $tablet) {
+  .projects-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-category-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
