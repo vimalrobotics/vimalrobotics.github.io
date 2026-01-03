@@ -2,7 +2,7 @@
 date: 2022-07-10
 title: Crane Hook Tracking and Positioning System
 subtitle: Autonomous Stabilization & Sensing
-image: '/images/projects/crane-hook/cover.jpg'
+image: '/images/chtp_cover.jpg'
 category: mechatronics
 featured: false
 ---

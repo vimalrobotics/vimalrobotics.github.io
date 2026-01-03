@@ -2,7 +2,7 @@
 date: 2025-01-05
 title: Laptop-Based Educational Robot Platform
 subtitle: Open-Source Robotics Education
-image: '/images/projects/education-robot/cover.jpg'
+image: '/images/laptop_bot_cover_2.jpg'
 category: research
 featured: true
 ---

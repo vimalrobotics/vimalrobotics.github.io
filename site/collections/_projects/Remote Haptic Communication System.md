@@ -2,7 +2,7 @@
 date: 2023-09-05
 title: Remote Haptic Communication System
 subtitle: Affective Computing & IoT
-image: '/images/projects/haptic/cover.jpg'
+image: '/images/remote_haptic_communication_cover.jpg'
 category: embedded-iot
 featured: true
 ---
