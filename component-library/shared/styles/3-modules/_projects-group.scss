@@ -71,3 +71,42 @@
     justify-content: center;
   }
 }
+
+/* =====================================
+   Left Nav – Animated Dot Indicator
+   ===================================== */
+
+.projects-category-nav.with-indicator {
+  position: sticky;
+  top: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-left: 20px; /* space for dot */
+}
+
+/* The dot */
+.projects-category-nav .nav-indicator {
+  position: absolute;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: $primary-color;
+
+  transform: translateY(0);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Buttons align */
+.projects-category-nav .button {
+  justify-content: flex-start;
+}
+
+.projects-category-nav .button {
+  opacity: 0.6;
+}
+
+.projects-category-nav .button.active {
+  opacity: 1;
+}

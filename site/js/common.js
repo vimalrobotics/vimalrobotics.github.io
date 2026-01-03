@@ -144,43 +144,42 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   /* ============================
-   Projects Group + Category Nav Sync
+   Projects Left Nav Indicator
    ============================ */
 
   const projectGroups = document.querySelectorAll(".projects-group");
-  const categoryButtons = document.querySelectorAll(
-    ".projects-category-nav .button"
-  );
+  const navButtons = document.querySelectorAll(".projects-category-nav .button");
+  const indicator = document.querySelector(".projects-category-nav .nav-indicator");
 
-  if (projectGroups.length && categoryButtons.length) {
+  if (projectGroups.length && navButtons.length && indicator) {
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
+      entries => {
+        entries.forEach(entry => {
           if (entry.isIntersecting) {
             const category = entry.target.dataset.category;
 
-            /* Highlight active group */
-            projectGroups.forEach((group) =>
-              group.classList.remove("is-active")
-            );
-            entry.target.classList.add("is-active");
+            navButtons.forEach(btn => {
+              const isActive = btn.dataset.target === category;
+              btn.classList.toggle("active", isActive);
 
-            /* Highlight active nav button */
-            categoryButtons.forEach((btn) => {
-              btn.classList.toggle(
-                "active",
-                btn.dataset.target === category
-              );
+              if (isActive) {
+                const offset =
+                  btn.offsetTop +
+                  btn.offsetHeight / 2 -
+                  indicator.offsetHeight / 2;
+
+                indicator.style.transform = `translateY(${offset}px)`;
+              }
             });
           }
         });
       },
       {
-        threshold: 0.35, // smooth, Apple-like trigger
+        threshold: 0.35
       }
     );
 
-    projectGroups.forEach((group) => observer.observe(group));
+    projectGroups.forEach(group => observer.observe(group));
   }
 
 });
