@@ -27,15 +27,21 @@
           <!-- Projects Grid -->
           {% if include.show_projects %}
           <div class="row">
+
             {% assign projects = site.projects %}
 
-            {% if include.category %}
-              {% assign projects = site.projects | where: "category", include.category %}
-            {% endif %}
+            {%- if include.featured_only == true -%}
+              {% assign projects = site.projects | where: "featured", true %}
+            {%- endif -%}
+
+            {%- if include.category -%}
+              {% assign projects = projects | where: "category", include.category %}
+            {%- endif -%}
 
             {% for project in projects limit:6 %}
               {% bookshop project-card project=project %}
             {% endfor %}
+
           </div>
           {% endif %}
 
