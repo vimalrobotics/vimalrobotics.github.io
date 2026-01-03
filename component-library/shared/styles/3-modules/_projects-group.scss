@@ -98,6 +98,13 @@
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.projects-category-nav .nav-indicator {
+  background: linear-gradient(
+    135deg,
+    lighten($primary-color, 8%),
+    darken($primary-color, 6%)
+  );
+}
 /* Buttons align */
 .projects-category-nav .button {
   justify-content: flex-start;
@@ -109,4 +116,14 @@
 
 .projects-category-nav .button.active {
   opacity: 1;
+}
+
+/* Active category button (left nav) */
+.projects-category-nav .button.active {
+  border-radius: 999px; /* fully rounded */
+  color: #fff;
+
+  /* Reuse button theme visuals */
+  background: inherit;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
