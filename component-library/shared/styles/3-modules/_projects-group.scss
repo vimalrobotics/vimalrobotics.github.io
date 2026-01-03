@@ -22,3 +22,27 @@
   background: rgba($primary-color, 0.03);
   box-shadow: 0 12px 32px rgba(0,0,0,0.06);
 }
+
+/* =====================================
+   Static Project Category Navigation
+   ===================================== */
+
+.projects-category-nav {
+  position: sticky;
+  top: 72px; /* below main header */
+  z-index: 15;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+
+  margin: 24px 0 48px;
+  padding: 8px 0;
+}
+
+/* Active state (set via JS) */
+.projects-category-nav .button.active {
+  background-color: $primary-color;
+  color: #fff;
+}

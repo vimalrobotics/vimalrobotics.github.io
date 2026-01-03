@@ -144,38 +144,43 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   /* ============================
-    Projects Group Highlight
-    ============================ */
-  const projectGroups = document.querySelectorAll(".projects-group");
-  const navLinks = document.querySelectorAll(".projects-nav a");
+   Projects Group + Category Nav Sync
+   ============================ */
 
-  if (projectGroups.length) {
+  const projectGroups = document.querySelectorAll(".projects-group");
+  const categoryButtons = document.querySelectorAll(
+    ".projects-category-nav .button"
+  );
+
+  if (projectGroups.length && categoryButtons.length) {
     const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
+      (entries) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const category = entry.target.dataset.category;
 
-            // Highlight group
-            projectGroups.forEach(g => g.classList.remove("is-active"));
+            /* Highlight active group */
+            projectGroups.forEach((group) =>
+              group.classList.remove("is-active")
+            );
             entry.target.classList.add("is-active");
 
-            // Highlight nav
-            navLinks.forEach(link => {
-              link.classList.toggle(
+            /* Highlight active nav button */
+            categoryButtons.forEach((btn) => {
+              btn.classList.toggle(
                 "active",
-                link.dataset.target === category
+                btn.dataset.target === category
               );
             });
           }
         });
       },
       {
-        threshold: 0.35
+        threshold: 0.35, // smooth, Apple-like trigger
       }
     );
 
-    projectGroups.forEach(group => observer.observe(group));
+    projectGroups.forEach((group) => observer.observe(group));
   }
 
 });

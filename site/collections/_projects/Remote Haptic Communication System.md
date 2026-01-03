@@ -4,7 +4,7 @@ title: Remote Haptic Communication System
 subtitle: Affective Computing & IoT
 image: '/images/projects/haptic/cover.jpg'
 category: embedded-iot
-featured: false
+featured: true
 ---
 
 ## Overview
