@@ -36,6 +36,7 @@
   background-color: $primary-color;
   color: #fff;
 }
+
 /* ---------- Category Sections ---------- */
 .projects-collage {
   margin-bottom: 80px;
@@ -55,7 +56,7 @@
 /* ---------- Grid ---------- */
 .collage-grid {
   display: grid;
-  width: 100%
+  width: 100%;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 24px;
 }
