@@ -144,37 +144,38 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   /* ============================
-  // Projects Page: Category Highlight
-  // (Runs ONLY on Projects page)
-  ============================ */
-  const projectsScroll = document.querySelector(".projects-scroll");
+    Projects Group Highlight
+    ============================ */
+  const projectGroups = document.querySelectorAll(".projects-group");
+  const navLinks = document.querySelectorAll(".projects-nav a");
 
-  if (projectsScroll) {
-    const projectSections = document.querySelectorAll(".projects-collage");
-    const navLinks = document.querySelectorAll(".projects-nav a");
-
+  if (projectGroups.length) {
     const observer = new IntersectionObserver(
-      (entries) => {
+      entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            const category = entry.target.getAttribute("data-category");
+            const category = entry.target.dataset.category;
 
+            // Highlight group
+            projectGroups.forEach(g => g.classList.remove("is-active"));
+            entry.target.classList.add("is-active");
+
+            // Highlight nav
             navLinks.forEach(link => {
               link.classList.toggle(
                 "active",
-                link.getAttribute("data-target") === category
+                link.dataset.target === category
               );
             });
           }
         });
       },
       {
-        root: null,
-        threshold: 0.45
+        threshold: 0.35
       }
     );
 
-    projectSections.forEach(section => observer.observe(section));
+    projectGroups.forEach(group => observer.observe(group));
   }
 
 });

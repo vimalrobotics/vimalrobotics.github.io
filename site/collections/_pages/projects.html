@@ -3,30 +3,37 @@ title: Projects
 layout: default
 ---
 
-<div class="container projects-page">
+<div class="container">
 
   {% bookshop page-heading
     title="Projects"
-    description="A curated selection of my research, robotics, and embedded systems work."
+    description="A categorized overview of my robotics, embedded systems, and research work."
   %}
 
-  <!-- ===== Research ===== -->
-  <section class="projects-group">
-    <h2 class="group-title">Research & Publications</h2>
+  <!-- Navigation (uses existing buttons) -->
+  <nav class="projects-nav">
+    <a href="#research" data-target="research">Research</a>
+    <a href="#robotics" data-target="robotics">Robotics</a>
+    <a href="#mechatronics" data-target="mechatronics">Mechatronics</a>
+    <a href="#embedded" data-target="embedded">Embedded & IoT</a>
+    <a href="#foundations" data-target="foundations">Foundations</a>
+  </nav>
 
-    {% assign research = site.projects | where: "category", "research" %}
-    {% for project in research %}
-      <div class="project-highlight">
+  <!-- ===== Research ===== -->
+  <section id="research" class="projects-group" data-category="research">
+    <h2 class="group-title">Research & Publications</h2>
+    <div class="row">
+      {% assign research = site.projects | where: "category", "research" %}
+      {% for project in research %}
         {% bookshop project-card project=project %}
-      </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
   </section>
 
   <!-- ===== Robotics ===== -->
-  <section class="projects-group">
+  <section id="robotics" class="projects-group" data-category="robotics">
     <h2 class="group-title">Robotics Systems</h2>
-
-    <div class="projects-row">
+    <div class="row">
       {% assign robotics = site.projects | where: "category", "robotics" %}
       {% for project in robotics %}
         {% bookshop project-card project=project %}
@@ -35,10 +42,9 @@ layout: default
   </section>
 
   <!-- ===== Mechatronics ===== -->
-  <section class="projects-group">
+  <section id="mechatronics" class="projects-group" data-category="mechatronics">
     <h2 class="group-title">Mechatronics & Manipulation</h2>
-
-    <div class="projects-row">
+    <div class="row">
       {% assign mechatronics = site.projects | where: "category", "mechatronics" %}
       {% for project in mechatronics %}
         {% bookshop project-card project=project %}
@@ -47,12 +53,22 @@ layout: default
   </section>
 
   <!-- ===== Embedded ===== -->
-  <section class="projects-group">
+  <section id="embedded" class="projects-group" data-category="embedded">
     <h2 class="group-title">Embedded Systems & IoT</h2>
-
-    <div class="projects-row compact">
+    <div class="row">
       {% assign embedded = site.projects | where: "category", "embedded-iot" %}
       {% for project in embedded %}
+        {% bookshop project-card project=project %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- ===== Foundations ===== -->
+  <section id="foundations" class="projects-group" data-category="foundations">
+    <h2 class="group-title">Foundational Projects</h2>
+    <div class="row">
+      {% assign foundations = site.projects | where: "category", "foundations" %}
+      {% for project in foundations %}
         {% bookshop project-card project=project %}
       {% endfor %}
     </div>

@@ -1,0 +1,24 @@
+/* =====================================
+   Projects Group Highlight (Minimal)
+   ===================================== */
+
+.projects-group {
+  padding: 32px 24px;
+  margin-bottom: 72px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Title */
+.group-title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+/* Active group highlight */
+.projects-group.is-active {
+  outline: 2px solid rgba($primary-color, 0.25);
+  background: rgba($primary-color, 0.03);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+}
