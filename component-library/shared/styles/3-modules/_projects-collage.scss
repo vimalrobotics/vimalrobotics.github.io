@@ -6,31 +6,36 @@
 /* ---------- Category Navigation ---------- */
 .projects-nav {
   position: sticky;
-  top: 72px;
+  top: 72px; /* below site header */
   z-index: 10;
 
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   justify-content: center;
-  flex-wrap: wrap;
 
   margin: 32px 0 48px;
-  padding: 0;
+  padding: 0; /* remove bar feeling */
 }
 
-/* Use existing button look */
+/* Use existing button theme */
 .projects-nav a {
   @extend .button;
   font-size: 14px;
   padding: 6px 14px;
+  border-radius: 999px; /* pill style */
 }
 
-/* Active state */
+/* Hover stays consistent with theme */
+.projects-nav a:hover {
+  transform: translateY(-1px);
+}
+
+/* Active category */
 .projects-nav a.active {
-  background: $primary-color;
+  background-color: $primary-color;
   color: #fff;
 }
-
 /* ---------- Category Sections ---------- */
 .projects-collage {
   margin-bottom: 80px;
