@@ -2,7 +2,7 @@
 date: 2024-06-18
 title: Elderly Monitoring and Safety System
 subtitle: Human-Centric IoT & Sensing
-image: '/images/health_tracker_cover.jpg'
+image: '/images/health_tracker_cover.png'
 category: embedded-iot
 featured: false
 ---
