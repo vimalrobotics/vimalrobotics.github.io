@@ -142,5 +142,39 @@ document.addEventListener("DOMContentLoaded", function () {
       })
     }
   });
+  
+  /* ============================
+  // Projects Page: Category Highlight
+  // (Runs ONLY on Projects page)
+  ============================ */
+  const projectsScroll = document.querySelector(".projects-scroll");
+
+  if (projectsScroll) {
+    const projectSections = document.querySelectorAll(".projects-collage");
+    const navLinks = document.querySelectorAll(".projects-nav a");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const category = entry.target.getAttribute("data-category");
+
+            navLinks.forEach(link => {
+              link.classList.toggle(
+                "active",
+                link.getAttribute("data-target") === category
+              );
+            });
+          }
+        });
+      },
+      {
+        root: projectsScroll,
+        threshold: 0.45
+      }
+    );
+
+    projectSections.forEach(section => observer.observe(section));
+  }
 
 });
