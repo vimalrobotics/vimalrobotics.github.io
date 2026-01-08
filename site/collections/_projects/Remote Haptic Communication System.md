@@ -31,7 +31,7 @@ The system is implemented using **two ESP32-based devices**:
 - Displays emotion-specific animations
 - Plays corresponding sound or haptic feedback
 
-![System Overview](/images/projects/remote-haptic/system.jpg)
+![System Overview](/images/heart_system.png)
 
 ---
 
@@ -70,7 +70,8 @@ This design allows **non-technical users** to set up the device without reflashi
 
 ## Hardware Design
 
-![3D Printed Enclosure](/images/projects/remote-haptic/enclosure.jpg)
+![3D Printed Enclosure front](/images/Remote haptic communication 3d printed case front.jpeg)
+![3D Printed Enclosure back](/images/Remote haptic communication 3d printed case back.jpeg)
 
 - Custom **3D-printed enclosure**
 - Separate compartments for:
@@ -79,7 +80,7 @@ This design allows **non-technical users** to set up the device without reflashi
   - Haptic actuator
   - Audio output
 
-![Internal Electronics](/images/projects/remote-haptic/electronics.jpg)
+![Internal Electronics](/images/Remote haptic communication electronics.jpeg)
 
 - ESP32 (sender & receiver)
 - Heart rate sensor
