@@ -94,7 +94,7 @@ A **custom control interface** was developed using **MIT App Inventor**, enablin
 - Finger compliance is arrested
 - Grasp becomes rigid and load-stable
 
-![Components](/images/projects/main components.jpg)
+![Components](/images/main components.jpeg)
 
 ---
 
