@@ -1,11 +1,11 @@
 name: Image Slider
-description: Simple image slideshow using Tiny Slider
+description: Slideshow gallery for project images
 props:
+  title:
+    type: string
+    required: false
   images:
     type: list
     label: Images
     item:
       type: string
-  aspect_ratio:
-    type: string
-    default: "16:9"

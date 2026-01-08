@@ -6,11 +6,14 @@ image: '/images/gripper_cover.jpg'
 category: research
 featured: true
 
-gallery_images:
-  - /images/main components.jpg",
-  - /images/Robot mounting check.jpg",
-  - /images/fingers.jpg",
-  - /images/adaptive gripper.jpg"
+content_blocks:
+  - _bookshop_name: image-slider
+    title: Mechanical Design & Prototyping
+    images:
+      - /images/main components.jpg",
+      - /images/Robot mounting check.jpg",
+      - /images/fingers.jpg",
+      - /images/adaptive gripper.jpg"
 ---
 
 ## Overview
