@@ -45,12 +45,15 @@ The gripper design is inspired by two key research directions:
 ![Exploded View](/images/gripper_exploded.jpg)
 
 **Key components:**
-- Fin Ray inspired flexible fingers (3D printed)
+- Fin Ray inspired flexible fingers using TPU Thermoplastic Polyurethane filament (3D printed)
 - Central vacuum suction cups
 - Electrostatic brake layers integrated along finger flex zones
 - Modular base for industrial robot mounting (ABB test mount)
 
-![ABB Mount Test](/images/Robot mounting check.jpg)
+![Components](/images/main components.jpg)
+![ABB Mount Test](/images/Robot mounting check.jpg){: style="width:50%;" }
+![Components](/images/fingers.jpg)
+![Components](/images/adaptive gripper.jpg)
 
 ---
 
@@ -94,7 +97,7 @@ A **custom control interface** was developed using **MIT App Inventor**, enablin
 - Finger compliance is arrested
 - Grasp becomes rigid and load-stable
 
-![Components](/images/main components.jpg)
+![Components](/images/gripper_demo.png)
 
 ---
 
