@@ -1,0 +1,28 @@
+.image-slider {
+  margin: 32px 0;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+  }
+
+  .tns-nav {
+    margin-top: 12px;
+    text-align: center;
+  }
+
+  .tns-nav button {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ccc;
+    border: none;
+    margin: 0 4px;
+  }
+
+  .tns-nav .tns-nav-active {
+    background: #333;
+  }
+}

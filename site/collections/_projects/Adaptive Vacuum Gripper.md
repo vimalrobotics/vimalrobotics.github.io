@@ -50,10 +50,17 @@ The gripper design is inspired by two key research directions:
 - Electrostatic brake layers integrated along finger flex zones
 - Modular base for industrial robot mounting (ABB test mount)
 
-![Components](/images/main components.jpg)
-![ABB Mount Test](/images/Robot mounting check.jpg){: style="width:50%;" }
-![Components](/images/fingers.jpg)
-![Components](/images/adaptive gripper.jpg)
+## Components & Assembly
+
+{% bookshop image-slider
+  images=[
+    "/images/main components.jpg",
+    "/images/Robot mounting check.jpg",
+    "/images/fingers.jpg"
+    "/images/adaptive gripper.jpg"
+  ]
+%}
+
 
 ---
 

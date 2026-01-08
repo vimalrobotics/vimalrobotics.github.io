@@ -1,0 +1,28 @@
+<div class="image-slider" data-slider>
+  <div class="slider-wrapper">
+    {% for img in include.images %}
+      <div class="slide">
+        <img src="{{ site.baseurl }}{{ img }}" alt="Project image">
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  if (typeof tns !== "undefined") {
+    document.querySelectorAll('[data-slider]').forEach(function (slider) {
+      tns({
+        container: slider.querySelector('.slider-wrapper'),
+        items: 1,
+        slideBy: "page",
+        autoplay: false,
+        controls: true,
+        nav: true,
+        mouseDrag: true,
+        gutter: 10
+      });
+    });
+  }
+});
+</script>
