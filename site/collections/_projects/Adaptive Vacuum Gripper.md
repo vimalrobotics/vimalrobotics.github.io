@@ -5,6 +5,12 @@ subtitle: Bio-Inspired Compliant Manipulation with Electrostatic Stiffness Contr
 image: '/images/gripper_cover.jpg'
 category: research
 featured: true
+
+gallery_images:
+  - /images/main components.jpg",
+  - /images/Robot mounting check.jpg",
+  - /images/fingers.jpg",
+  - /images/adaptive gripper.jpg"
 ---
 
 ## Overview
@@ -52,16 +58,7 @@ The gripper design is inspired by two key research directions:
 
 ## Components & Assembly
 
-{% bookshop image-slider
-  images=[
-    "/images/main components.jpg",
-    "/images/Robot mounting check.jpg",
-    "/images/fingers.jpg",
-    "/images/adaptive gripper.jpg"
-  ]
-%}
-
-<!-- {% bookshop image-slider images=page.gallery_images %} -->
+{% bookshop image-slider images=page.gallery_images %}
 
 ---
 
