@@ -56,11 +56,12 @@ The gripper design is inspired by two key research directions:
   images=[
     "/images/main components.jpg",
     "/images/Robot mounting check.jpg",
-    "/images/fingers.jpg"
+    "/images/fingers.jpg",
     "/images/adaptive gripper.jpg"
   ]
 %}
 
+<!-- {% bookshop image-slider images=page.gallery_images %} -->
 
 ---
 
