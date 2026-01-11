@@ -127,10 +127,33 @@
   }
 }
 
+/* =========================
+   Remove nav button stroke
+========================= */
+.gallery__nav {
+  background: transparent;     // remove circular bg
+  box-shadow: none;             // remove shadow
+  border: none;                 // remove border
+  outline: none;                // remove outline
+  padding: 0;                   // remove extra ring
+}
+
+.gallery__nav:focus,
+.gallery__nav:focus-visible,
+.gallery__nav:active {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Ionicon cleanup */
 .gallery__nav ion-icon {
-  font-size: 36px;
+  font-size: 42px;
+  color: #222;                  // set explicit color
+  stroke: none;                 // remove SVG stroke
+  background: none;
 }
 
 .gallery__nav:hover ion-icon {
-  transform: scale(1.1);
+  opacity: 0.85;
+  transform: scale(1.08);
 }
