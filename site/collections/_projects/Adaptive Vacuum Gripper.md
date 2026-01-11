@@ -6,14 +6,11 @@ image: '/images/gripper_cover.jpg'
 category: research
 featured: true
 
-content_blocks:
-  - _bookshop_name: image-slider
-    title: Mechanical Design & Prototyping
-    images:
-      - /images/main-components.jpg
-      - /images/robot-mounting-check.jpg
-      - /images/fingers.jpg
-      - /images/adaptive-gripper.jpg
+gallery_images:
+  - /images/main-components.jpg
+  - /images/robot-mounting-check.jpg
+  - /images/fingers.jpg
+  - /images/adaptive-gripper.jpg
 ---
 
 ## Overview
@@ -130,6 +127,16 @@ This hybrid approach enables **multi-function manipulation with a single gripper
 - Electrostatic braking enables **mechanical intelligence**
 - Stiffness modulation is more effective than force control alone
 - Hybrid grippers can significantly reduce system complexity in real deployments
+
+---
+
+## Design Gallery
+
+{% bookshop gallery-section
+  title="Design & Prototyping"
+  description_html="<p>Mechanical design, electronics, and integration tests.</p>"
+  images=page.gallery_images
+%}
 
 ---
 

@@ -1,0 +1,34 @@
+<!-- begin gallery -->
+<section class="section testimonials animate">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+
+        <div class="section__info">
+          <div class="section__head">
+            <h2 class="section__title">{{ include.title }}</h2>
+            <ul class="controls list-reset" aria-label="Slider Navigation">
+              <li class="prev" data-controls="prev">
+                <ion-icon name="arrow-back"></ion-icon>
+              </li>
+              <li class="next" data-controls="next">
+                <ion-icon name="arrow-forward"></ion-icon>
+              </li>
+            </ul>
+          </div>
+          <div class="section__description">{{ include.description_html }}</div>
+        </div>
+
+        {% if include.images %}
+        <div class="testimonials__slider my-slider">
+          {% for img in include.images %}
+            {% bookshop gallery-card image=img %}
+          {% endfor %}
+        </div>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end gallery -->
