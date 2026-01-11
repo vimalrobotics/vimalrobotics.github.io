@@ -126,3 +126,11 @@
     }
   }
 }
+
+.gallery__nav ion-icon {
+  font-size: 36px;
+}
+
+.gallery__nav:hover ion-icon {
+  transform: scale(1.1);
+}
