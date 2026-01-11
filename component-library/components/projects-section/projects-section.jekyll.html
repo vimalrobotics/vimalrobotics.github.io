@@ -1,4 +1,5 @@
 <!-- begin projects -->
+ {% assign c = "c-hero" %}
 <section class="section projects" id="projects">
   <div class="container">
     <div class="row">
@@ -11,9 +12,7 @@
               <h2 class="section__title">{{ include.title }}</h2>
 
               {% if include.link_url %}
-              <a class="section__link" href="{{ include.link_url }}">
-                View all <ion-icon name="arrow-forward"></ion-icon>
-              </a>
+              <a href="{{ include.cta_button_link }}" class="cta-button c-button c-button--primary c-button--small">{{ include.cta_button }}</a>
               {% endif %}
             </div>
 
