@@ -6,27 +6,49 @@ image: '/images/sb-strombreaker_cover.jpg'
 category: research
 featured: true
 
-gallery_images:
-  - /images/sb-base-wheels.jpg
-  - /images/sb-battery-designimport-4.jpg
-  - /images/sb-burned-driver.jpg
-  - /images/sb-cover-1.jpg
-  - /images/sb-cover-2.jpg
-  - /images/sb-cover-3.jpg
-  - /images/sb-designimport-1.jpg
-  - /images/sb-designimport-2.jpg
-  - /images/sb-designimport-3.jpg
-  - /images/sb-hover-board-electronics.jpg
-  - /images/sb-hover-moard.jpg
-  - /images/sb-installing-ros-jetson.jpg
-  - /images/sb-linki-mounting.jpg
-  - /images/sb-parts.jpeg
-  - /images/sb-project_1.jpg
-  - /images/sb-sensor-wiring.jpg
-  - /images/sb-sheetmetal-platfom.jpg
-  - /images/sb-testing-2.jpg
-  - /images/sb-testing-driver.jpg
-  - /images/sb-testing-lidar.jpg
+gallery:
+  title: Smart Bot Build Gallery
+  images:
+    - image: /images/sb-base-wheels.jpg
+      caption: Base Frame with Wheels
+    - image: /images/sb-battery-designimport-4.jpg
+      caption: Battery Design Import
+    - image: /images/sb-burned-driver.jpg
+      caption: Burnt Motor Driver
+    - image: /images/sb-cover-1.jpg
+      caption: Robot Cover – Image 1
+    - image: /images/sb-cover-2.jpg
+      caption: Robot Cover – Image 2
+    - image: /images/sb-cover-3.jpg
+      caption: Robot Cover – Image 3
+    - image: /images/sb-designimport-1.jpg
+      caption: Mechanical Design Import – 1
+    - image: /images/sb-designimport-2.jpg
+      caption: Mechanical Design Import – 2
+    - image: /images/sb-designimport-3.jpg
+      caption: Mechanical Design Import – 3
+    - image: /images/sb-hover-board-electronics.jpg
+      caption: Hoverboard Electronics
+    - image: /images/sb-hover-moard.jpg
+      caption: Hoverboard Motor
+    - image: /images/sb-installing-ros-jetson.jpg
+      caption: Installing ROS on Jetson
+    - image: /images/sb-linki-mounting.jpg
+      caption: Linkage Mounting
+    - image: /images/sb-parts.jpeg
+      caption: Robot Parts Overview
+    - image: /images/sb-project_1.jpg
+      caption: Smart Bot Project Assembly
+    - image: /images/sb-sensor-wiring.jpg
+      caption: Sensor Wiring Setup
+    - image: /images/sb-sheetmetal-platfom.jpg
+      caption: Sheet Metal Platform
+    - image: /images/sb-testing-2.jpg
+      caption: System Testing
+    - image: /images/sb-testing-driver.jpg
+      caption: Motor Driver Testing
+    - image: /images/sb-testing-lidar.jpg
+      caption: LiDAR Testing
 
 ---
 
@@ -131,6 +153,15 @@ wheelchair towing using ROS-based systems.
 - Assistive systems demand conservative and predictable control
 - ROS enables rapid development but requires careful system integration
 - Human-centered constraints significantly influence algorithm design
+
+---
+
+## Project Showcase
+
+{% bookshop gallery-section
+  title=page.gallery.title
+  images=page.gallery.images
+%}
 
 ---
 

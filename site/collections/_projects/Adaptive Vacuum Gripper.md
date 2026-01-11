@@ -10,27 +10,27 @@ gallery:
   title: Robot Build Gallery
   images:
     - image: /images/main-components.jpg
-      caption: Chassis assembly
+      caption: Machined Components
     - image: /images/robot-mounting-check.jpg
-      caption: Motor and gearbox
+      caption: ABB Robot Mounting Check
     - image: /images/fingers.jpg
-      caption: Electronics mounted
+      caption: 3D Printed Fin-Ray Fingers
     - image: /images/adaptive-gripper.jpg
-      caption: Final testing
+      caption: Gripper Assembly
     - image: /images/tpu-material.jpg
-      caption: Final testing
+      caption: TPU Filament
     - image: /images/gripper-holder-3dprint.jpg
-      caption: Final testing
+      caption: Finger Holder
     - image: /images/laser_cutting.jpg
-      caption: Final testing
+      caption: Laser-Cut Aluminum Parts
     - image: /images/before-machining.jpg
-      caption: Final testing
+      caption: Pre-Machining Check
     - image: /images/3d-pringing-finger.jpg
-      caption: Final testing
+      caption: Finger 3D Printed
     - image: /images/3d-printing-links.jpg
-      caption: Final testing
+      caption: Link 3D Printed
     - image: /images/dro-drilling.jpg
-      caption: Final testing
+      caption: DRO Drilling & Chamfering
 
 ---
 
