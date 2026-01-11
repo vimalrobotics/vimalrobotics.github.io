@@ -43,4 +43,17 @@
     pointer-events: auto;
     cursor: zoom-in;
   }
+
+  .lightense-wrap img {
+  position: static !important;
+  transform: none !important;
+  top: auto !important;
+  left: auto !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 90vw !important;
+  max-height: 90vh !important;
+  object-fit: contain !important;
+  }
+
 }
