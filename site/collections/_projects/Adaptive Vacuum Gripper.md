@@ -135,6 +135,11 @@ This hybrid approach enables **multi-function manipulation with a single gripper
 - Stiffness modulation is more effective than force control alone
 - Hybrid grippers can significantly reduce system complexity in real deployments
 
+{% bookshop gallery-section
+  title="Design & Prototyping"
+  images=page.gallery_images
+%}
+
 ---
 
 ## References & Background

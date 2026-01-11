@@ -132,11 +132,6 @@ wheelchair towing using ROS-based systems.
 - ROS enables rapid development but requires careful system integration
 - Human-centered constraints significantly influence algorithm design
 
-<!-- {% bookshop gallery-section
-  title="Design & Prototyping"
-  images=page.gallery_images
-%} -->
-
 ---
 
 ## Future Work

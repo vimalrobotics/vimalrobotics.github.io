@@ -1,0 +1,20 @@
+spec:
+  structures:
+    - content_blocks
+  label: Image Gallery
+  description: Standalone image gallery with Lightense zoom
+  icon: photo
+  tags:
+    - Media
+    - Gallery
+
+blueprint:
+  title: ""
+  description_html: ""
+  images: []
+
+preview:
+  title: Project Gallery
+  images:
+    - /images/image-example-1.jpg
+    - /images/image-example-2.jpg
