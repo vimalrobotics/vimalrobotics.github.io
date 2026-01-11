@@ -22,7 +22,8 @@
                 src="{{ item.image | relative_url }}"
                 alt="{{ item.caption }}"
                 class="gallery__image"
-                data-full="{{ item.image | relative_url }}">
+                data-full="{{ item.image | relative_url }}"
+                data-no-lightense>
             </div>
           </div>
         {% endfor %}
@@ -73,7 +74,7 @@
     thumbs[index].classList.add('is-active');
     caption.textContent = thumbs[index].alt || '';
 
-    /* background blur uses full image */
+    // Background blur uses full-resolution image
     wrap.style.backgroundImage = `url(${img.dataset.full})`;
   }
 
@@ -83,6 +84,14 @@
   thumbs.forEach(thumb => {
     thumb.addEventListener('click', () => {
       showSlide(+thumb.dataset.index);
+    });
+  });
+
+  // Absolute safety: block any external zoom library
+  gallery.querySelectorAll('.gallery__image').forEach(img => {
+    img.addEventListener('click', e => {
+      e.preventDefault();
+      e.stopPropagation();
     });
   });
 
