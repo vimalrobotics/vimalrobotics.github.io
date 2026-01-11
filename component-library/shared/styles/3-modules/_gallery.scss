@@ -29,7 +29,7 @@
     opacity: 0.9;
   }
 
-  /* PERFECTLY CENTERED IMAGE */
+  /* Centered foreground image */
   .gallery-image img {
     position: absolute;
     top: 50%;
@@ -43,8 +43,10 @@
     pointer-events: auto;
     cursor: zoom-in;
   }
+}
 
-  .lightense-wrap img {
+/* 🔑 CRITICAL: Lightense reset must be GLOBAL */
+.lightense-wrap img {
   position: static !important;
   transform: none !important;
   top: auto !important;
@@ -54,6 +56,4 @@
   max-width: 90vw !important;
   max-height: 90vh !important;
   object-fit: contain !important;
-  }
-
 }
