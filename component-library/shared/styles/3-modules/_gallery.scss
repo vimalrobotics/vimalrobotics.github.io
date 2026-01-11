@@ -15,24 +15,40 @@
   &__slide {
     display: none;
     position: relative;
+    border-radius: 22px;
+  }
+
+  &__image-wrap {
+    position: relative;
+    width: 100%;
+    height: 520px;
+    border-radius: 22px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__image-wrap::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    filter: blur(28px) brightness(0.9);
+    transform: scale(1.15);
+    z-index: 1;
   }
 
   &__image {
+    position: relative;
+    z-index: 2;
     width: 100%;
-    height: 520px;
+    height: 100%;
     object-fit: contain;
     border-radius: 22px;
-    cursor: zoom-in;
-    transition: transform 0.35s ease, object-fit 0.35s ease;
     outline: none;
     border: none;
-    box-shadow: none;
-  }
-
-  &__image.is-zoomed {
-    object-fit: cover;
-    transform: scale(1.05);
-    cursor: zoom-out;
   }
 
   &__count {
@@ -44,6 +60,7 @@
     padding: 4px 10px;
     border-radius: 12px;
     font-size: 12px;
+    z-index: 5;
   }
 
   &__nav {
@@ -61,10 +78,6 @@
 
     &--prev { left: 14px; }
     &--next { right: 14px; }
-
-    &:hover {
-      background: rgba(0,0,0,0.85);
-    }
   }
 
   &__caption {
@@ -88,58 +101,11 @@
     border-radius: 12px;
     cursor: pointer;
     opacity: 0.5;
-    transition: opacity 0.2s ease, transform 0.2s ease;
     outline: none;
     border: none;
-    box-shadow: none;
-
-    &:hover {
-      opacity: 0.85;
-      transform: scale(1.05);
-    }
 
     &.is-active {
       opacity: 1;
     }
   }
-
-  .gallery__image-wrap {
-  position: relative;
-  width: 100%;
-  height: 520px;
-  border-radius: 22px;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center;
-  }
-  
-  .gallery__image {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 22px;
-  outline: none;
-  border: none;
-  }
-
-  .gallery__image-wrap::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: inherit;
-  background-size: cover;
-  background-position: center;
-  filter: blur(28px) brightness(0.9);
-  transform: scale(1.15);
-  z-index: 1;
-  }
-
-  .gallery__slide,
-  .gallery__nav,
-  .gallery__thumb {
-    border-radius: 22px;
-  }
-
 }

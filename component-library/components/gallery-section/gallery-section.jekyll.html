@@ -8,21 +8,19 @@
       <div class="gallery__slide">
         <div class="gallery__count">
           {{ forloop.index }} / {{ include.images.size }}
+        </div>
+
         <div class="gallery__image-wrap">
-        <img
+          <img
             src="{{ item.image | relative_url }}"
             alt="{{ item.caption }}"
             class="gallery__image">
         </div>
+      </div>
     {% endfor %}
 
-    <button class="gallery__nav gallery__nav--prev" aria-label="Previous">
-      &#10094;
-    </button>
-
-    <button class="gallery__nav gallery__nav--next" aria-label="Next">
-      &#10095;
-    </button>
+    <button class="gallery__nav gallery__nav--prev">&#10094;</button>
+    <button class="gallery__nav gallery__nav--next">&#10095;</button>
 
     <div class="gallery__caption"></div>
 
@@ -48,54 +46,29 @@
   const next = gallery.querySelector('.gallery__nav--next');
 
   let index = 0;
-  let autoSlide;
 
   function showSlide(i) {
     index = (i + slides.length) % slides.length;
 
-    slides.forEach(slide => {
-      slide.style.display = 'none';
-      slide.querySelector('.gallery__image')
-           .classList.remove('is-zoomed');
-    });
-
+    slides.forEach(s => s.style.display = 'none');
     thumbs.forEach(t => t.classList.remove('is-active'));
 
     slides[index].style.display = 'block';
-    slides[index].querySelector('.gallery__image-wrap')
-    .style.backgroundImage = `url(${thumbs[index].src})`;
     thumbs[index].classList.add('is-active');
     caption.textContent = thumbs[index].alt || '';
+
+    slides[index]
+      .querySelector('.gallery__image-wrap')
+      .style.backgroundImage = `url(${thumbs[index].src})`;
   }
 
   prev.addEventListener('click', () => showSlide(index - 1));
   next.addEventListener('click', () => showSlide(index + 1));
 
-  thumbs.forEach(thumb => {
-    thumb.addEventListener('click', () => {
-      showSlide(+thumb.dataset.index);
-    });
-  });
-
-  slides.forEach(slide => {
-    const img = slide.querySelector('.gallery__image');
-    img.addEventListener('click', () => {
-      img.classList.toggle('is-zoomed');
-    });
-  });
-
-  function startAutoSlide() {
-    autoSlide = setInterval(() => showSlide(index + 1), 2500);
-  }
-
-  function stopAutoSlide() {
-    clearInterval(autoSlide);
-  }
-
-  gallery.addEventListener('mouseenter', stopAutoSlide);
-  gallery.addEventListener('mouseleave', startAutoSlide);
+  thumbs.forEach(t =>
+    t.addEventListener('click', () => showSlide(+t.dataset.index))
+  );
 
   showSlide(0);
-  startAutoSlide();
 })();
 </script>
