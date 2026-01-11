@@ -8,13 +8,12 @@
       <div class="gallery__slide">
         <div class="gallery__count">
           {{ forloop.index }} / {{ include.images.size }}
-        </div>
-
+        <div class="gallery__image-wrap">
         <img
-          src="{{ item.image | relative_url }}"
-          alt="{{ item.caption }}"
-          class="gallery__image">
-      </div>
+            src="{{ item.image | relative_url }}"
+            alt="{{ item.caption }}"
+            class="gallery__image">
+        </div>
     {% endfor %}
 
     <button class="gallery__nav gallery__nav--prev" aria-label="Previous">
@@ -63,6 +62,8 @@
     thumbs.forEach(t => t.classList.remove('is-active'));
 
     slides[index].style.display = 'block';
+    slides[index].querySelector('.gallery__image-wrap')
+    .style.backgroundImage = `url(${thumbs[index].src})`;
     thumbs[index].classList.add('is-active');
     caption.textContent = thumbs[index].alt || '';
   }
