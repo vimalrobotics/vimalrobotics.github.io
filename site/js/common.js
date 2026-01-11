@@ -61,19 +61,17 @@ document.addEventListener("DOMContentLoaded", function () {
   /* =======================
   // Zoom Image
   ======================= */
-  const lightense = document.querySelector(".page img, .post img"),
-  imageLink = document.querySelectorAll(".page a img, .post a img");
-
-  if (imageLink) {
-    for (var i = 0; i < imageLink.length; i++) imageLink[i].parentNode.classList.add("image-link");
-    for (var i = 0; i < imageLink.length; i++) imageLink[i].classList.add("no-lightense");
-  }
+  const lightense = document.querySelector(".page img, .post img, .gallery-image img"),
+  imageLink = document.querySelectorAll(".page a img, .post a img, .gallery-image a img");
 
   if (lightense) {
-    Lightense(".page img:not(.no-lightense), .post img:not(.no-lightense)", {
-    padding: 60,
-    offset: 30
-    });
+    Lightense(
+      ".page img:not(.no-lightense), .post img:not(.no-lightense), .gallery-image img:not(.no-lightense)",
+      {
+        padding: 60,
+        offset: 30
+      }
+    );
   }
 
   /* ============================

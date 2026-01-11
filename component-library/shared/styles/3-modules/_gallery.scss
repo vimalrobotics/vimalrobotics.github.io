@@ -1,17 +1,9 @@
-/* Gallery slider – override testimonial styles ONLY here */
-
 .gallery-item {
 
-  /* REMOVE testimonial card styling */
   .testimonial-content {
     padding: 0 !important;
     background: transparent !important;
     border-radius: 0 !important;
-  }
-
-  .gallery-content {
-    padding: 0;
-    background: transparent;
   }
 
   .gallery-image {
@@ -21,9 +13,10 @@
     border-radius: 16px;
     overflow: hidden;
     background: #000;
+    cursor: zoom-in;
   }
 
-  /* Blurred background from the same image */
+  /* Blurred background */
   .gallery-image::before {
     content: "";
     position: absolute;
@@ -36,14 +29,18 @@
     opacity: 0.9;
   }
 
-  /* Foreground image */
+  /* PERFECTLY CENTERED IMAGE */
   .gallery-image img {
-    position: relative;
-    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 100%;
     height: 100%;
+    transform: translate(-50%, -50%);
     object-fit: contain;
-    pointer-events: none;
+    z-index: 1;
     user-select: none;
+    pointer-events: auto;
+    cursor: zoom-in;
   }
 }
