@@ -6,15 +6,22 @@
   <div class="gallery__container">
     {% for item in include.images %}
       <div class="gallery__slide">
-        <div class="gallery__count">{{ forloop.index }} / {{ include.images.size }}</div>
-        <img src="{{ item.image | relative_url }}" alt="{{ item.caption }}">
+        <div class="gallery__count">
+          {{ forloop.index }} / {{ include.images.size }}
+        </div>
+
+        <img
+          src="{{ item.image | relative_url }}"
+          alt="{{ item.caption }}"
+          class="gallery__image">
       </div>
     {% endfor %}
 
-    <button class="gallery__nav gallery__nav--prev" aria-label="Previous slide">
+    <button class="gallery__nav gallery__nav--prev" aria-label="Previous">
       &#10094;
     </button>
-    <button class="gallery__nav gallery__nav--next" aria-label="Next slide">
+
+    <button class="gallery__nav gallery__nav--next" aria-label="Next">
       &#10095;
     </button>
 
@@ -23,9 +30,9 @@
     <div class="gallery__thumbs">
       {% for item in include.images %}
         <img
-          class="gallery__thumb"
           src="{{ item.image | relative_url }}"
           alt="{{ item.caption }}"
+          class="gallery__thumb"
           data-index="{{ forloop.index0 }}">
       {% endfor %}
     </div>
@@ -38,11 +45,21 @@
   const slides = gallery.querySelectorAll('.gallery__slide');
   const thumbs = gallery.querySelectorAll('.gallery__thumb');
   const caption = gallery.querySelector('.gallery__caption');
+  const prev = gallery.querySelector('.gallery__nav--prev');
+  const next = gallery.querySelector('.gallery__nav--next');
+
   let index = 0;
+  let autoSlide;
 
   function showSlide(i) {
     index = (i + slides.length) % slides.length;
-    slides.forEach(s => s.style.display = 'none');
+
+    slides.forEach(slide => {
+      slide.style.display = 'none';
+      slide.querySelector('.gallery__image')
+           .classList.remove('is-zoomed');
+    });
+
     thumbs.forEach(t => t.classList.remove('is-active'));
 
     slides[index].style.display = 'block';
@@ -50,16 +67,34 @@
     caption.textContent = thumbs[index].alt || '';
   }
 
-  gallery.querySelector('.gallery__nav--prev')
-    .addEventListener('click', () => showSlide(index - 1));
+  prev.addEventListener('click', () => showSlide(index - 1));
+  next.addEventListener('click', () => showSlide(index + 1));
 
-  gallery.querySelector('.gallery__nav--next')
-    .addEventListener('click', () => showSlide(index + 1));
+  thumbs.forEach(thumb => {
+    thumb.addEventListener('click', () => {
+      showSlide(+thumb.dataset.index);
+    });
+  });
 
-  thumbs.forEach(t =>
-    t.addEventListener('click', () => showSlide(+t.dataset.index))
-  );
+  slides.forEach(slide => {
+    const img = slide.querySelector('.gallery__image');
+    img.addEventListener('click', () => {
+      img.classList.toggle('is-zoomed');
+    });
+  });
+
+  function startAutoSlide() {
+    autoSlide = setInterval(() => showSlide(index + 1), 2500);
+  }
+
+  function stopAutoSlide() {
+    clearInterval(autoSlide);
+  }
+
+  gallery.addEventListener('mouseenter', stopAutoSlide);
+  gallery.addEventListener('mouseleave', startAutoSlide);
 
   showSlide(0);
+  startAutoSlide();
 })();
 </script>
