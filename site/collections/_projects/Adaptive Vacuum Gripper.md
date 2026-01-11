@@ -137,13 +137,6 @@ This hybrid approach enables **multi-function manipulation with a single gripper
 
 ---
 
-{% bookshop gallery-section
-  title="Design & Prototyping"
-  images=page.gallery_images
-%}
-
----
-
 ## References & Background
 
 - **Festo Adaptive Gripper (Fin Ray Effect)**
