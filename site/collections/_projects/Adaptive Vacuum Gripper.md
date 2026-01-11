@@ -9,14 +9,14 @@ featured: true
 gallery:
   title: Robot Build Gallery
   images:
+    - image: /images/adaptive-gripper.jpg
+      caption: Gripper Assembly
     - image: /images/main-components.jpg
       caption: Machined Components
     - image: /images/robot-mounting-check.jpg
       caption: ABB Robot Mounting Check
     - image: /images/fingers.jpg
       caption: 3D Printed Fin-Ray Fingers
-    - image: /images/adaptive-gripper.jpg
-      caption: Gripper Assembly
     - image: /images/tpu-material.jpg
       caption: TPU Filament
     - image: /images/gripper-holder-3dprint.jpg

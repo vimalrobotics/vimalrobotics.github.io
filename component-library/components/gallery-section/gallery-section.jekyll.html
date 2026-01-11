@@ -35,14 +35,19 @@
 
     <div class="gallery__caption"></div>
 
-    <div class="gallery__thumbs">
-      {% for item in include.images %}
-        <img
-          src="{{ item.image | relative_url }}"
-          alt="{{ item.caption }}"
-          class="gallery__thumb"
-          data-index="{{ forloop.index0 }}">
-      {% endfor %}
+    <!-- ✅ Thumbnails wrapper -->
+    <div class="gallery__thumbs-wrap" data-no-lightense>
+      <div class="gallery__thumbs">
+        {% for item in include.images %}
+          <div class="gallery__thumb-item">
+            <img
+              src="{{ item.image | relative_url }}"
+              alt="{{ item.caption }}"
+              class="gallery__thumb no-lightense"
+              data-index="{{ forloop.index0 }}">
+          </div>
+        {% endfor %}
+      </div>
     </div>
 
   </div>
@@ -86,8 +91,7 @@
     });
   });
 
-  // Absolute safety: block any external zoom library
-  gallery.querySelectorAll('.gallery__image').forEach(img => {
+  gallery.querySelectorAll('img').forEach(img => {
     img.addEventListener('click', e => {
       e.preventDefault();
       e.stopPropagation();
