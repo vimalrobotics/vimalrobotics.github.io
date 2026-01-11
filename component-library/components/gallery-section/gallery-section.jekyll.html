@@ -1,38 +1,13 @@
 <!-- begin gallery-section -->
-<section class="standalone-gallery section animate page">
-  <div class="container page">
+<section class="section standalone-gallery">
+  <div class="container">
+    <h2 class="section__title">{{ include.title }}</h2>
 
-    {% if include.title or include.description_html %}
-    <div class="section__info">
-      <div class="section__head">
-        <h2 class="section__title">{{ include.title }}</h2>
-      </div>
-
-      {% if include.description_html %}
-      <div class="section__description">
-        {{ include.description_html }}
-      </div>
-      {% endif %}
-    </div>
-    {% endif %}
-
-    {% if include.images %}
-    <div class="gallery-grid">
-      {% for img in include.images %}
-        <div
-          class="gallery-item"
-          style="--gallery-bg: url('{{ site.baseurl }}{{ img }}');"
-        >
-          <img
-            src="{{ site.baseurl }}{{ img }}"
-            alt="Project gallery image"
-            loading="lazy"
-          >
-        </div>
+    <div class="gallery-slider">
+      {% for img in include.gallery_images %}
+        {% bookshop gallery-card image=img %}
       {% endfor %}
     </div>
-    {% endif %}
-
   </div>
 </section>
 <!-- end gallery-section -->

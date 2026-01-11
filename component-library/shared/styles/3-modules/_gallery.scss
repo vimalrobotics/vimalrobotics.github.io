@@ -84,3 +84,39 @@
   height: auto !important;
   object-fit: contain !important;
 }
+
+/* ===============================
+   Standalone Image Gallery Grid
+   =============================== */
+
+.standalone-gallery {
+  margin: 32px 0;
+}
+
+/* GRID LAYOUT */
+.gallery-slider {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* Desktop large */
+@media (min-width: 1200px) {
+  .gallery-slider {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .gallery-slider {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .gallery-slider {
+    grid-template-columns: 1fr;
+  }
+}
