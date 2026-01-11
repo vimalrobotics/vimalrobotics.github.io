@@ -1,6 +1,13 @@
-/* Gallery slider using testimonial layout but image-focused */
+/* Gallery slider – override testimonial styles ONLY here */
 
 .gallery-item {
+
+  /* REMOVE testimonial card styling */
+  .testimonial-content {
+    padding: 0 !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+  }
 
   .gallery-content {
     padding: 0;
@@ -13,10 +20,10 @@
     height: 380px;
     border-radius: 16px;
     overflow: hidden;
-    background: #000; /* fallback */
+    background: #000;
   }
 
-  /* Blurred background layer */
+  /* Blurred background from the same image */
   .gallery-image::before {
     content: "";
     position: absolute;
@@ -25,7 +32,7 @@
     background-size: cover;
     background-position: center;
     filter: blur(24px);
-    transform: scale(1.15);
+    transform: scale(1.2);
     opacity: 0.9;
   }
 
@@ -38,6 +45,5 @@
     object-fit: contain;
     pointer-events: none;
     user-select: none;
-    background: transparent;
   }
 }
