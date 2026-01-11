@@ -2,7 +2,7 @@
 date: 2023-03-15
 title: Stormbreaker
 subtitle: Assistive Autonomous Towing Robot (ROS)
-image: '/images/strombreaker_cover.jpg'
+image: '/images/sb-strombreaker_cover.jpg'
 category: research
 featured: true
 
@@ -24,8 +24,6 @@ gallery_images:
   - /images/sb-project_1.jpg
   - /images/sb-sensor-wiring.jpg
   - /images/sb-sheetmetal-platfom.jpg
-  - /images/sb-strombreaker.jpg
-  - /images/sb-strombreaker_cover.jpg
   - /images/sb-testing-2.jpg
   - /images/sb-testing-driver.jpg
   - /images/sb-testing-lidar.jpg
