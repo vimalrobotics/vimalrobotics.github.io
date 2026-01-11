@@ -5,6 +5,31 @@ subtitle: Assistive Autonomous Towing Robot (ROS)
 image: '/images/strombreaker_cover.jpg'
 category: research
 featured: true
+
+gallery_images:
+  - /images/sb-base-wheels.jpg
+  - /images/sb-battery-designimport-4.jpg
+  - /images/sb-burned-driver.jpg
+  - /images/sb-cover-1.jpg
+  - /images/sb-cover-2.jpg
+  - /images/sb-cover-3.jpg
+  - /images/sb-designimport-1.jpg
+  - /images/sb-designimport-2.jpg
+  - /images/sb-designimport-3.jpg
+  - /images/sb-hover-board-electronics.jpg
+  - /images/sb-hover-moard.jpg
+  - /images/sb-installing-ros-jetson.jpg
+  - /images/sb-linki-mounting.jpg
+  - /images/sb-parts.jpeg
+  - /images/sb-project_1.jpg
+  - /images/sb-sensor-wiring.jpg
+  - /images/sb-sheetmetal-platfom.jpg
+  - /images/sb-strombreaker.jpg
+  - /images/sb-strombreaker_cover.jpg
+  - /images/sb-testing-2.jpg
+  - /images/sb-testing-driver.jpg
+  - /images/sb-testing-lidar.jpg
+
 ---
 
 ## Overview
@@ -75,7 +100,7 @@ Safety considerations included:
 - Predictable motion behavior
 - Robust recovery from localization loss
 
-![Stormbreaker Navigation in RViz](/images/rviz.png)
+![Stormbreaker Navigation in RViz](/images/sb-rviz.png)
 
 These constraints shaped both the mechanical design and the control algorithms.
 
@@ -91,7 +116,7 @@ The system was validated through:
 Stormbreaker demonstrated consistent navigation performance and safe towing
 behavior under real-world conditions.
 
-![Stormbreaker](/images/strombreaker.jpg)
+![Stormbreaker](/images/sb-strombreaker.jpg)
 ---
 
 ## Research Contribution
@@ -108,6 +133,11 @@ wheelchair towing using ROS-based systems.
 - Assistive systems demand conservative and predictable control
 - ROS enables rapid development but requires careful system integration
 - Human-centered constraints significantly influence algorithm design
+
+{% bookshop gallery-section
+  title="Design & Prototyping"
+  images=page.gallery_images
+%}
 
 ---
 

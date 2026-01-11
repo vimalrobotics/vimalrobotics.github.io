@@ -18,7 +18,6 @@ gallery_images:
   - /images/3d-pringing-finger.jpg
   - /images/3d-printing-links.jpg
   - /images/dro-drilling.jpg
-  - /images/flux-sensor.jpg
 ---
 
 ## Overview
