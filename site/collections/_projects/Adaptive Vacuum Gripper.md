@@ -10,10 +10,10 @@ content_blocks:
   - _bookshop_name: image-slider
     title: Mechanical Design & Prototyping
     images:
-      - /images/main components.jpg",
-      - /images/Robot mounting check.jpg",
-      - /images/fingers.jpg",
-      - /images/adaptive gripper.jpg"
+      - /images/main-components.jpg
+      - /images/robot-mounting-check.jpg
+      - /images/fingers.jpg
+      - /images/adaptive-gripper.jpg
 ---
 
 ## Overview
@@ -58,10 +58,6 @@ The gripper design is inspired by two key research directions:
 - Central vacuum suction cups
 - Electrostatic brake layers integrated along finger flex zones
 - Modular base for industrial robot mounting (ABB test mount)
-
-## Components & Assembly
-
-{% bookshop image-slider images=page.gallery_images %}
 
 ---
 

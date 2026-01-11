@@ -1,6 +1,20 @@
 /* ===== Gallery-style Image Slider ===== */
 
 .image-slider-section {
+
+  .gallery-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+  }
+
+  .gallery-slide img {
+    max-width: 100%;
+    max-height: 520px;
+    object-fit: contain;
+  }
+
   .gallery-frame {
     border-radius: 16px;
     overflow: hidden;
@@ -10,12 +24,6 @@
 
   .image-slider {
     position: relative;
-  }
-
-  .gallery-slide img {
-    width: 100%;
-    height: auto;
-    display: block;
   }
 
   /* Arrows */
