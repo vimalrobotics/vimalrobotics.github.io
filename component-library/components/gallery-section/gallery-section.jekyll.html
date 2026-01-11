@@ -4,42 +4,33 @@
   {% endif %}
 
   <div class="gallery__container">
-    {% for item in include.images %}
-      <div class="gallery__slide">
-        <div class="gallery__count">
-          {{ forloop.index }} / {{ include.images.size }}
-        </div>
-
-        <img
-          src="{{ item.image | relative_url }}"
-          alt="{{ item.caption }}"
-          class="gallery__image">
-      </div>
-    {% endfor %}
 
     <div class="gallery__viewer">
-    <button class="gallery__nav gallery__nav--prev" aria-label="Previous">
+      <button class="gallery__nav gallery__nav--prev" aria-label="Previous">
         &#10094;
-    </button>
+      </button>
 
-    <div class="gallery__slides">
+      <div class="gallery__slides">
         {% for item in include.images %}
-        <div class="gallery__slide">
+          <div class="gallery__slide">
             <div class="gallery__count">
-            {{ forloop.index }} / {{ include.images.size }}
+              {{ forloop.index }} / {{ include.images.size }}
             </div>
 
-            <img
-            src="{{ item.image | relative_url }}"
-            alt="{{ item.caption }}"
-            class="gallery__image">
-        </div>
+            <div class="gallery__image-wrap">
+              <img
+                src="{{ item.image | relative_url }}"
+                alt="{{ item.caption }}"
+                class="gallery__image"
+                data-full="{{ item.image | relative_url }}">
+            </div>
+          </div>
         {% endfor %}
-    </div>
+      </div>
 
-    <button class="gallery__nav gallery__nav--next" aria-label="Next">
+      <button class="gallery__nav gallery__nav--next" aria-label="Next">
         &#10095;
-    </button>
+      </button>
     </div>
 
     <div class="gallery__caption"></div>
@@ -53,6 +44,7 @@
           data-index="{{ forloop.index0 }}">
       {% endfor %}
     </div>
+
   </div>
 </section>
 
@@ -79,9 +71,14 @@
 
     thumbs.forEach(t => t.classList.remove('is-active'));
 
-    slides[index].style.display = 'block';
+    const activeSlide = slides[index];
+    const img = activeSlide.querySelector('.gallery__image');
+    const wrap = activeSlide.querySelector('.gallery__image-wrap');
+
+    activeSlide.style.display = 'block';
     thumbs[index].classList.add('is-active');
     caption.textContent = thumbs[index].alt || '';
+    wrap.style.backgroundImage = `url(${img.dataset.full})`;
   }
 
   prev.addEventListener('click', () => showSlide(index - 1));
