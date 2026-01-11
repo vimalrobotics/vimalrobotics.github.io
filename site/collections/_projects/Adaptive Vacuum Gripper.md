@@ -76,7 +76,7 @@ The electrostatic brakes are energized only during **stiffness locking**, result
 
 ## Control Interface
 
-![Mobile App](/images/gripper app.jpeg){: style="width:50%;" }
+![Mobile App](/images/gripper-mobile-app.png){: style="width:50%;" }
 
 A **custom control interface** was developed using **MIT App Inventor**, enabling:
 - Grasp mode selection (soft / stiff)
@@ -132,7 +132,6 @@ This hybrid approach enables **multi-function manipulation with a single gripper
 
 {% bookshop gallery-section
   title="Design & Prototyping"
-  description_html="<p>Mechanical design, electronics, and integration tests.</p>"
   images=page.gallery_images
 %}
 
