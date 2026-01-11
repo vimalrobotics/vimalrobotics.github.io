@@ -47,13 +47,15 @@
 
 /* 🔑 CRITICAL: Lightense reset must be GLOBAL */
 .lightense-wrap img {
-  position: static !important;
-  transform: none !important;
-  top: auto !important;
-  left: auto !important;
+  position: relative !important;
   width: auto !important;
   height: auto !important;
   max-width: 90vw !important;
   max-height: 90vh !important;
   object-fit: contain !important;
+}
+
+
+.tns-slide-cloned img {
+  pointer-events: none !important;
 }

@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (lightense) {
     Lightense(
-      ".page img:not(.no-lightense), .post img:not(.no-lightense), .gallery-image img:not(.no-lightense)",
+      ".page img:not(.no-lightense):not(.tns-slide-cloned), .post img:not(.no-lightense), .gallery-image img:not(.no-lightense)",
       {
         padding: 60,
         offset: 30
