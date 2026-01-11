@@ -11,6 +11,14 @@ gallery_images:
   - /images/robot-mounting-check.jpg
   - /images/fingers.jpg
   - /images/adaptive-gripper.jpg
+  - /images/tpu-material.jpg
+  - /images/gripper-holder-3dprint.jpg
+  - /images/laser_cutting.jpg
+  - /images/before-machining.jpg
+  - /images/3d-pringing-finger.jpg
+  - /images/3d-printing-links.jpg
+  - /images/dro-drilling.jpg
+  - /images/flux-sensor.jpg
 ---
 
 ## Overview
