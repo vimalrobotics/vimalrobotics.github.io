@@ -6,18 +6,32 @@ image: '/images/gripper_cover.jpg'
 category: research
 featured: true
 
-gallery_images:
-  - /images/main-components.jpg
-  - /images/robot-mounting-check.jpg
-  - /images/fingers.jpg
-  - /images/adaptive-gripper.jpg
-  - /images/tpu-material.jpg
-  - /images/gripper-holder-3dprint.jpg
-  - /images/laser_cutting.jpg
-  - /images/before-machining.jpg
-  - /images/3d-pringing-finger.jpg
-  - /images/3d-printing-links.jpg
-  - /images/dro-drilling.jpg
+gallery:
+  title: Robot Build Gallery
+  images:
+    - image: /images/main-components.jpg
+      caption: Chassis assembly
+    - image: /images/robot-mounting-check.jpg
+      caption: Motor and gearbox
+    - image: /images/fingers.jpg
+      caption: Electronics mounted
+    - image: /images/adaptive-gripper.jpg
+      caption: Final testing
+    - image: /images/tpu-material.jpg
+      caption: Final testing
+    - image: /images/gripper-holder-3dprint.jpg
+      caption: Final testing
+    - image: /images/laser_cutting.jpg
+      caption: Final testing
+    - image: /images/before-machining.jpg
+      caption: Final testing
+    - image: /images/3d-pringing-finger.jpg
+      caption: Final testing
+    - image: /images/3d-printing-links.jpg
+      caption: Final testing
+    - image: /images/dro-drilling.jpg
+      caption: Final testing
+
 ---
 
 ## Overview
@@ -135,9 +149,11 @@ This hybrid approach enables **multi-function manipulation with a single gripper
 - Stiffness modulation is more effective than force control alone
 - Hybrid grippers can significantly reduce system complexity in real deployments
 
+## Project Showcase
+
 {% bookshop gallery-section
-  title="Design & Prototyping"
-  images=page.gallery_images
+  title=page.gallery.title
+  images=page.gallery.images
 %}
 
 ---

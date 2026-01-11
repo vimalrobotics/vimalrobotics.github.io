@@ -1,13 +1,65 @@
-<!-- begin gallery-section -->
-<section class="section standalone-gallery">
-  <div class="container">
-    <h2 class="section__title">{{ include.title }}</h2>
+<section class="gallery">
+  {% if include.title %}
+    <h2 class="gallery__title">{{ include.title }}</h2>
+  {% endif %}
 
-    <div class="gallery-slider">
-      {% for img in include.gallery_images %}
-        {% bookshop gallery-card image=img %}
+  <div class="gallery__container">
+    {% for item in include.images %}
+      <div class="gallery__slide">
+        <div class="gallery__count">{{ forloop.index }} / {{ include.images.size }}</div>
+        <img src="{{ item.image | relative_url }}" alt="{{ item.caption }}">
+      </div>
+    {% endfor %}
+
+    <button class="gallery__nav gallery__nav--prev" aria-label="Previous slide">
+      &#10094;
+    </button>
+    <button class="gallery__nav gallery__nav--next" aria-label="Next slide">
+      &#10095;
+    </button>
+
+    <div class="gallery__caption"></div>
+
+    <div class="gallery__thumbs">
+      {% for item in include.images %}
+        <img
+          class="gallery__thumb"
+          src="{{ item.image | relative_url }}"
+          alt="{{ item.caption }}"
+          data-index="{{ forloop.index0 }}">
       {% endfor %}
     </div>
   </div>
 </section>
-<!-- end gallery-section -->
+
+<script>
+(function () {
+  const gallery = document.currentScript.previousElementSibling;
+  const slides = gallery.querySelectorAll('.gallery__slide');
+  const thumbs = gallery.querySelectorAll('.gallery__thumb');
+  const caption = gallery.querySelector('.gallery__caption');
+  let index = 0;
+
+  function showSlide(i) {
+    index = (i + slides.length) % slides.length;
+    slides.forEach(s => s.style.display = 'none');
+    thumbs.forEach(t => t.classList.remove('is-active'));
+
+    slides[index].style.display = 'block';
+    thumbs[index].classList.add('is-active');
+    caption.textContent = thumbs[index].alt || '';
+  }
+
+  gallery.querySelector('.gallery__nav--prev')
+    .addEventListener('click', () => showSlide(index - 1));
+
+  gallery.querySelector('.gallery__nav--next')
+    .addEventListener('click', () => showSlide(index + 1));
+
+  thumbs.forEach(t =>
+    t.addEventListener('click', () => showSlide(+t.dataset.index))
+  );
+
+  showSlide(0);
+})();
+</script>
