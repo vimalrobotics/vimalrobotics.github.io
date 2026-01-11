@@ -10,6 +10,12 @@
     border-radius: 0 !important;
   }
 
+  /* Lightense must escape all parents */
+  .standalone-gallery,
+  .standalone-gallery * {
+    overflow: visible !important;
+  }
+
   .gallery-image {
     position: relative;
     width: 100%;
@@ -62,4 +68,12 @@
   max-width: 90vw !important;
   max-height: 90vh !important;
   object-fit: contain !important;
+}
+
+.lightense-backdrop {
+  z-index: 9999 !important;
+}
+
+.lightense-wrap {
+  z-index: 10000 !important;
 }
