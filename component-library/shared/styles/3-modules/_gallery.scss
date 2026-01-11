@@ -56,17 +56,9 @@
     height: 100%;
     object-fit: contain;
     border-radius: 22px;
-    cursor: zoom-in;
-    transition: transform 0.35s ease, object-fit 0.35s ease;
     outline: none;
     border: none;
     box-shadow: none;
-  }
-
-  &__image.is-zoomed {
-    object-fit: cover;
-    transform: scale(1.05);
-    cursor: zoom-out;
   }
 
   &__count {

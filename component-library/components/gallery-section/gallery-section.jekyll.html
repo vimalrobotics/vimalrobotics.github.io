@@ -58,17 +58,11 @@
   const next = gallery.querySelector('.gallery__nav--next');
 
   let index = 0;
-  let autoSlide;
 
   function showSlide(i) {
     index = (i + slides.length) % slides.length;
 
-    slides.forEach(slide => {
-      slide.style.display = 'none';
-      slide.querySelector('.gallery__image')
-           .classList.remove('is-zoomed');
-    });
-
+    slides.forEach(slide => slide.style.display = 'none');
     thumbs.forEach(t => t.classList.remove('is-active'));
 
     const activeSlide = slides[index];
@@ -78,6 +72,8 @@
     activeSlide.style.display = 'block';
     thumbs[index].classList.add('is-active');
     caption.textContent = thumbs[index].alt || '';
+
+    /* background blur uses full image */
     wrap.style.backgroundImage = `url(${img.dataset.full})`;
   }
 
@@ -90,25 +86,6 @@
     });
   });
 
-  slides.forEach(slide => {
-    const img = slide.querySelector('.gallery__image');
-    img.addEventListener('click', () => {
-      img.classList.toggle('is-zoomed');
-    });
-  });
-
-  function startAutoSlide() {
-    autoSlide = setInterval(() => showSlide(index + 1), 2300);
-  }
-
-  function stopAutoSlide() {
-    clearInterval(autoSlide);
-  }
-
-  gallery.addEventListener('mouseenter', stopAutoSlide);
-  gallery.addEventListener('mouseleave', startAutoSlide);
-
   showSlide(0);
-  startAutoSlide();
 })();
 </script>
