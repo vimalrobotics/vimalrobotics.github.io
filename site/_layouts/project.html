@@ -23,4 +23,37 @@ layout: default
   </div>
   {% endif %}
 
+  {% if page.gallery_images %}
+    <section class="standalone-gallery section">
+      <div class="container page">
+
+        <div class="section__info">
+          <div class="section__head">
+            <h2 class="section__title">Design & Prototyping</h2>
+          </div>
+          <div class="section__description">
+            Mechanical design, fabrication, and integration stages.
+          </div>
+        </div>
+
+        <div class="gallery-grid">
+          {% for img in page.gallery_images %}
+            <div
+              class="gallery-item"
+              style="--gallery-bg: url('{{ site.baseurl }}{{ img }}');"
+            >
+              <img
+                src="{{ site.baseurl }}{{ img }}"
+                alt="Project gallery image"
+                loading="lazy"
+              >
+            </div>
+          {% endfor %}
+        </div>
+
+      </div>
+    </section>
+    {% endif %}
+
+
 </div>
