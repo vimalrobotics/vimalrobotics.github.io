@@ -21,9 +21,8 @@
               <img
                 src="{{ item.image | relative_url }}"
                 alt="{{ item.caption }}"
-                class="gallery__image"
-                data-full="{{ item.image | relative_url }}"
-                data-no-lightense>
+                class="gallery__image no-lightense"
+                data-full="{{ item.image | relative_url }}">
             </div>
           </div>
         {% endfor %}

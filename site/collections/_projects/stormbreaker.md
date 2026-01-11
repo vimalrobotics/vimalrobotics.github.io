@@ -11,6 +11,8 @@ gallery:
   images:
     - image: /images/sb-base-wheels.jpg
       caption: Base Frame with Wheels
+    - image: /images/sb-electronics-strombreaker.jpg
+      caption: Electronics Placements
     - image: /images/sb-battery-designimport-4.jpg
       caption: Battery Design Import
     - image: /images/sb-burned-driver.jpg
@@ -37,8 +39,6 @@ gallery:
       caption: Linkage Mounting
     - image: /images/sb-parts.jpeg
       caption: Robot Parts Overview
-    - image: /images/sb-project_1.jpg
-      caption: Smart Bot Project Assembly
     - image: /images/sb-sensor-wiring.jpg
       caption: Sensor Wiring Setup
     - image: /images/sb-sheetmetal-platfom.jpg
@@ -50,7 +50,7 @@ gallery:
     - image: /images/sb-testing-lidar.jpg
       caption: LiDAR Testing
 
----
+--- 
 
 ## Overview
 
