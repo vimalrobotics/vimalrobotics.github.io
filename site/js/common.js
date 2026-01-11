@@ -59,14 +59,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   /* =======================
-  // Zoom Image
+    Zoom Image (Lightense)
   ======================= */
-  const lightense = document.querySelector(".page img, .post img, .gallery-image img"),
-  imageLink = document.querySelectorAll(".page a img, .post a img, .gallery-image a img");
+  const lightense = document.querySelector(".page img, .post img");
 
   if (lightense) {
     Lightense(
-      ".page img:not(.no-lightense):not(.tns-slide-cloned), .post img:not(.no-lightense), .gallery-image img:not(.no-lightense)",
+      ".page img:not(.no-lightense):not(.tns-slide-cloned), " +
+      ".post img:not(.no-lightense)",
       {
         padding: 60,
         offset: 30
