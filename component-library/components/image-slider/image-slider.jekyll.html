@@ -9,10 +9,10 @@
     </div>
     {% endif %}
 
-    <div class="image-slider" data-slider>
-      <div class="slider-wrapper">
+    <div class="gallery-frame">
+      <div class="image-slider" data-slider>
         {% for img in include.images %}
-          <div class="slide">
+          <div class="gallery-slide">
             <img src="{{ site.baseurl }}{{ img }}" alt="Project image">
           </div>
         {% endfor %}
@@ -27,14 +27,15 @@ document.addEventListener("DOMContentLoaded", function () {
   if (typeof tns !== "undefined") {
     document.querySelectorAll('[data-slider]').forEach(function (slider) {
       tns({
-        container: slider.querySelector('.slider-wrapper'),
+        container: slider,
         items: 1,
         slideBy: 1,
         autoplay: false,
         controls: true,
         nav: true,
         mouseDrag: true,
-        gutter: 12
+        controlsText: ['', ''],
+        gutter: 0
       });
     });
   }
