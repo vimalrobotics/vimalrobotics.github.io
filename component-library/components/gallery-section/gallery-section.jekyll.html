@@ -7,20 +7,27 @@
         <div class="section__info">
           <div class="section__head">
             <h2 class="section__title">{{ include.title }}</h2>
-            <ul class="controls list-reset" aria-label="Slider Navigation">
-              <li class="prev" data-controls="prev">
+
+            <!-- Gallery Controls -->
+            <ul class="controls list-reset gallery-controls" aria-label="Slider Navigation">
+              <li class="prev">
                 <ion-icon name="arrow-back"></ion-icon>
               </li>
-              <li class="next" data-controls="next">
+              <li class="next">
                 <ion-icon name="arrow-forward"></ion-icon>
               </li>
             </ul>
           </div>
-          <div class="section__description">{{ include.description_html }}</div>
+
+          {% if include.description_html %}
+          <div class="section__description">
+            {{ include.description_html }}
+          </div>
+          {% endif %}
         </div>
 
         {% if include.images %}
-        <div class="testimonials__slider my-slider">
+        <div class="testimonials__slider my-slider gallery-slider">
           {% for img in include.images %}
             {% bookshop gallery-card image=img %}
           {% endfor %}
@@ -32,3 +39,27 @@
   </div>
 </section>
 <!-- end gallery -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  if (typeof tns !== "undefined") {
+    document.querySelectorAll(".gallery-slider").forEach(function (slider) {
+      const controls = slider
+        .closest(".section")
+        .querySelector(".gallery-controls");
+
+      tns({
+        container: slider,
+        items: 1,
+        slideBy: 1,
+        mouseDrag: true,
+        controls: true,
+        controlsContainer: controls,
+        nav: false,
+        autoplay: false,
+        gutter: 24
+      });
+    });
+  }
+});
+</script>

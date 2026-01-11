@@ -130,8 +130,6 @@ This hybrid approach enables **multi-function manipulation with a single gripper
 
 ---
 
-## Design Gallery
-
 {% bookshop gallery-section
   title="Design & Prototyping"
   description_html="<p>Mechanical design, electronics, and integration tests.</p>"
