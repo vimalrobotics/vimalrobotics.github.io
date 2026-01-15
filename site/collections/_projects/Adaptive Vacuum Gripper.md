@@ -31,6 +31,10 @@ gallery:
       caption: Link 3D Printed
     - image: /images/dro-drilling.jpg
       caption: DRO Drilling & Chamfering
+    - image: /images/silicon_suction_cup_mold.jpg
+      caption: Suction Cup Mold 3D Printed
+    - image: /images/suction_cup.jpg
+      caption: Suction Cup
 
 ---
 
@@ -156,6 +160,22 @@ This hybrid approach enables **multi-function manipulation with a single gripper
   images=page.gallery.images
 %}
 
+---
+
+## System demonstration video
+![Real-Time Detection Example](/images/realtime-detection-example.png)
+
+<iframe 
+  width="100%" 
+  height="420" 
+  src="https://youtube.com/shorts/B2xzuO_wwMo" 
+  title="system demonstration video"
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+  allowfullscreen>
+</iframe>
+
+[▶ More videos](https://www.youtube.com/playlist?list=PL0HlTDjADUyxsMMCUhYJpvZrvplqUhXep)
 ---
 
 ## References & Background

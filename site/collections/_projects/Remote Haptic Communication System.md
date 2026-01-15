@@ -128,7 +128,7 @@ This system was designed as a **platform**, not a one-off prototype.
 
 ---
 
-[▶ Watch system demonstration video](https://youtu.be/w_A0t3XSzVY)
+[▶ More videos](https://www.youtube.com/playlist?list=PL0HlTDjADUyxsMMCUhYJpvZrvplqUhXep)
 
 
 > *This project demonstrates the integration of embedded systems, networking, human–computer interaction, and product-oriented design in a real-world IoT context.*
