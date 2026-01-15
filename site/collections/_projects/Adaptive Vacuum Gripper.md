@@ -163,19 +163,19 @@ This hybrid approach enables **multi-function manipulation with a single gripper
 ---
 
 ## System demonstration video
-![Real-Time Detection Example](/images/realtime-detection-example.png)
 
-<iframe 
-  width="100%" 
-  height="420" 
-  src="https://youtube.com/shorts/B2xzuO_wwMo" 
-  title="system demonstration video"
-  frameborder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+<iframe
+  width="100%"
+  height="420"
+  src="https://www.youtube.com/embed/B2xzuO_wwMo"
+  title="System demonstration video"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen>
 </iframe>
 
 [▶ More videos](https://www.youtube.com/playlist?list=PL0HlTDjADUyxsMMCUhYJpvZrvplqUhXep)
+
 ---
 
 ## References & Background
