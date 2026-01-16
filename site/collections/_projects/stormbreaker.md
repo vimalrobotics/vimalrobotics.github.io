@@ -56,8 +56,9 @@ gallery:
 
 **Stormbreaker** is an assistive autonomous robotic platform designed to tow a wheelchair
 safely and reliably in real-world environments.  
-The system was developed as my final year research project and resulted in an
-**IEEE conference publication**.
+The system was developed as my final year research project and resulted in an IEEE conference publication
+(available on IEEE Xplore: https://ieeexplore.ieee.org/document/10199906/authors#authors
+).
 
 The project focuses on bridging autonomous navigation research with practical,
 human-centered deployment constraints such as safety, reliability, and user trust.
@@ -145,6 +146,7 @@ This work was published as an **IEEE conference paper**, contributing to the fie
 of assistive robotics by presenting a practical, deployable approach to autonomous
 wheelchair towing using ROS-based systems.
 
+![IEEE conference paper](/images/strombreaker_ieee.jpeg)
 ---
 
 ## Key Learnings

@@ -178,6 +178,20 @@ This hybrid approach enables **multi-function manipulation with a single gripper
 
 ---
 
+## Design Patent Illustration
+
+![Adaptive Vacuum Gripper – Registered Design Patent](/images/design_patent_page_1.jpg)
+
+**Registered Design Patent — Government of India**  
+Design No: **370051-001** (Class 08-08)  
+Registration Date: **29 August 2022**
+
+The above figure represents the officially registered industrial design of the
+adaptive vacuum gripper, covering the external form and structural layout of the
+end-effector used in this research.
+
+---
+
 ## References & Background
 
 - **Festo Adaptive Gripper (Fin Ray Effect)**
