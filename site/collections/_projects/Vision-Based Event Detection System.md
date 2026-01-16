@@ -38,13 +38,13 @@ This diagram shows the internal architecture and data flow:
 ## Real-Time Detection Demo
 ![Real-Time Detection Example](/images/realtime-detection-example.png)
 
-<iframe 
-  width="100%" 
-  height="420" 
-  src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
-  title="Real-Time Vision-Based Event Detection Demo"
-  frameborder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+<iframe
+  width="100%"
+  height="420"
+  src="https://www.youtube.com/embed/HLYk8uajz80?si=HhPnQDJWQjLXFYRQ"
+  title="System demonstration video"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen>
 </iframe>
 
@@ -60,20 +60,6 @@ This demo shows the system performing real-time detection and triggering automat
 - Visual overlays for debugging and performance monitoring
 
 --- 
-
-## System demonstration video
-
-<iframe
-  width="100%"
-  height="420"
-  src="https://www.youtube.com/embed/HLYk8uajz80?si=HhPnQDJWQjLXFYRQ"
-  title="System demonstration video"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen>
-</iframe>
-
----
 
 ## Key Learnings
 - Designing **stable event triggers** requires temporal logic, not single-frame detection

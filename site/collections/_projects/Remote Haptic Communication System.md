@@ -128,12 +128,12 @@ This system was designed as a **platform**, not a one-off prototype.
 
 ---
 
-## System demonstration video
+## Remote Haptic Communication System demonstration video
 
 <iframe
   width="100%"
   height="420"
-  src="https://youtu.be/embed/w_A0t3XSzVY"
+  src="https://www.youtube.com/embed/w_A0t3XSzVY?si=NpDGP5qjMpPC-96D"
   title="System demonstration video"
   frameborder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
