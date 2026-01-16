@@ -25,7 +25,7 @@ This diagram illustrates the high-level operational flow of the system:
 ---
 
 ## System Structure Diagram
-![System Structure Block Diagram](images/system-structure-diagram.png)
+![System Structure Block Diagram](/images/system-structure-diagram.png)
 
 This diagram shows the internal architecture and data flow:
 - Frame acquisition and preprocessing
