@@ -21,6 +21,19 @@ The system also guided users through calming exercises upon entry.
 - Educational institutions
 - Public entry spaces
 
+## System demonstration video
+
+<iframe
+  width="100%"
+  height="420"
+  src="https://www.youtube.com/embed/kPMmHl-kV-g?si=8XKet-5bbjmyIYu6"
+  title="System demonstration video"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
+
+
 ## Key Learnings
 - Embedded vision constraints
 - Human-centered system design

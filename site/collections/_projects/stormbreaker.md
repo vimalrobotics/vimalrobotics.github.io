@@ -145,6 +145,7 @@ behavior under real-world conditions.
 This work was published as an **IEEE conference paper**, contributing to the field
 of assistive robotics by presenting a practical, deployable approach to autonomous
 wheelchair towing using ROS-based systems.
+[▶ View on IEEE Xplore](https://ieeexplore.ieee.org/document/10199906)
 
 ![IEEE conference paper](/images/strombreaker_ieee.jpeg)
 ---

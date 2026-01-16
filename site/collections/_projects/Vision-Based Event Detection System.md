@@ -2,7 +2,7 @@
 date: 2024-12-10
 title: Real-Time Vision-Based Event Detection System
 subtitle: Computer Vision Triggered Automation
-image: '/images/vision-events_cover.jpg'
+image: '/images/vision-events_cover.png'
 category: robotics
 featured: true
 ---
@@ -14,7 +14,7 @@ Originally developed for interactive media, gaming overlays, and live streaming 
 ---
 
 ## Basic Operation Diagram
-![Basic Operation Block Diagram](/images/basic-operation-diagram.png)
+![Basic Operation Block Diagram](/images/basic_operation_vision.png)
 
 This diagram illustrates the high-level operational flow of the system:
 - Screen capture from a live visual source
@@ -25,7 +25,7 @@ This diagram illustrates the high-level operational flow of the system:
 ---
 
 ## System Structure Diagram
-![System Structure Block Diagram](imagessystem-structure-diagram.png)
+![System Structure Block Diagram](images/system-structure-diagram.png)
 
 This diagram shows the internal architecture and data flow:
 - Frame acquisition and preprocessing
@@ -58,6 +58,20 @@ This demo shows the system performing real-time detection and triggering automat
 - Smart lighting and audio automation via IoT
 - Non-blocking, multi-threaded execution
 - Visual overlays for debugging and performance monitoring
+
+--- 
+
+## System demonstration video
+
+<iframe
+  width="100%"
+  height="420"
+  src="https://www.youtube.com/embed/HLYk8uajz80?si=HhPnQDJWQjLXFYRQ"
+  title="System demonstration video"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
 
 ---
 
