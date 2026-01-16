@@ -1,9 +1,11 @@
 .gallery {
   padding: 4rem 0;
+  background: $background-color;
 
   &__title {
     text-align: center;
     margin-bottom: 2rem;
+    color: $heading-font-color;
   }
 
   &__container {
@@ -35,6 +37,7 @@
     overflow: hidden;
     background-size: cover;
     background-position: center;
+    background-color: $secondary-color;
   }
 
   &__image-wrap::before {
@@ -44,7 +47,7 @@
     background-image: inherit;
     background-size: cover;
     background-position: center;
-    filter: blur(28px) brightness(0.9);
+    filter: blur(28px) brightness(0.85);
     transform: scale(1.15);
     z-index: 1;
   }
@@ -62,14 +65,15 @@
     outline: none;
     border: none;
     box-shadow: none;
+    background: $background-color-alt;
   }
 
   &__count {
     position: absolute;
     top: 12px;
     left: 12px;
-    background: rgba(0,0,0,0.65);
-    color: #fff;
+    background: rgba(15, 23, 42, 0.75); // secondary-color overlay
+    color: $white;
     padding: 4px 10px;
     border-radius: 12px;
     font-size: 12px;
@@ -77,8 +81,8 @@
   }
 
   &__nav {
-    background: rgba(0,0,0,0.6);
-    color: #fff;
+    background: transparent;
+    color: $primary-color;
     border: none;
     padding: 14px;
     font-size: 20px;
@@ -86,7 +90,7 @@
     border-radius: 50%;
 
     &:hover {
-      background: rgba(0,0,0,0.85);
+      color: lighten($primary-color, 8%);
     }
   }
 
@@ -94,7 +98,7 @@
     text-align: center;
     margin: 1rem 0;
     font-size: 14px;
-    color: #666;
+    color: $blue-gray;
   }
 
   &__thumbs {
@@ -115,6 +119,7 @@
     outline: none;
     border: none;
     box-shadow: none;
+    background-color: $secondary-color;
 
     &:hover {
       opacity: 0.85;
@@ -123,6 +128,7 @@
 
     &.is-active {
       opacity: 1;
+      outline: 2px solid $primary-color;
     }
   }
 }
@@ -144,7 +150,7 @@
 
 .gallery__nav ion-icon {
   font-size: 42px;
-  color: #222;
+  color: $primary-color;
   background: none;
 }
 
