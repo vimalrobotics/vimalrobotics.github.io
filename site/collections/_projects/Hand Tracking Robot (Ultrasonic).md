@@ -2,7 +2,7 @@
 date: 2018-11-02
 title: Hand Tracking Robot Using Ultrasonic Sensors
 subtitle: Sensor-Based Reactive Control
-image: '/images/projects/hand-tracking/cover.jpg'
+image: '/images/ult_bot_hand_tracking_cover.jpg'
 category: foundations
 featured: false
 ---
@@ -15,8 +15,11 @@ The system supported both manual remote control and autonomous tracking modes.
 - Ultrasonic distance sensing
 - Mode switching (manual / autonomous)
 - Real-time motor control
-
+![Robot image 1](/images/ult_bot_hand_tracking_front.jpg)
+![Robot image 2](/images/ult_bot_hand_tracking_back.jpg)
 ## Learning Outcome
 - Reactive control systems
 - Sensor noise handling
 - State-based mode management
+
+ult_bot_hand_tracking_back
