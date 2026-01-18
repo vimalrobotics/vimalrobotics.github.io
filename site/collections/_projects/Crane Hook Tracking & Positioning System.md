@@ -37,13 +37,10 @@ The system is composed of three primary subsystems:
 ### 1. Sensor Layer (Hook-Mounted)
 
 - **Wireless ultrasonic sensors** mounted on multiple sides of the hook
+![Wired Ultrasonic Sensor](/images/chtp_wired_sensor.jpg)
 - **Wired ultrasonic sensors** for redundancy and validation
 - Weather-proof sensor enclosures with mechanical mounts
 - Anti-locking curved gear mesh for stable orientation
-
-![Crane Hook Sensors Mounted](/images/chtp_crane_hook.jpg)
-![Crane Hook ](/images/chtp_crane_hook2.jpg)
-![Wired Ultrasonic Sensor](/images/chtp_wired_sensor.jpg)
 ![Wireless Ultrasonic Sensor](/images/chtp_wireless_sensor.jpg)
 
 ---
@@ -57,11 +54,11 @@ The **controller box acts as the core processing and communication unit**, integ
 - GPS module
 - Power management and battery monitoring
 - Data logging and fail-safe mechanisms
-
+![Components Inside Controller](/images/chtp_components.jpg)
 The controller aggregates **both wired and wireless sensor data**, processes raw distance measurements, and transmits stabilized positional data to the ground station GUI.
 
 ![Controller Box](/images/chtp_controller_box.jpg)
-![Components Inside Controller](/images/chtp_components.jpg)
+
 
 ---
 
@@ -107,7 +104,11 @@ The controller aggregates **both wired and wireless sensor data**, processes raw
 - Validated under real industrial conditions
 - Confirmed survivability in vibration and EMI-heavy environments
 
-![Industrial Testing](/images/chtp_testing.jpg)
+![Crane Hook Sensors Mounted](/images/chtp_crane_hook.jpg)
+![Crane Hook ](/images/chtp_crane_hook2.jpg)
+![Crane Hook ](/images/chtp_with_load_industrial.png)
+
+
 
 ---
 
