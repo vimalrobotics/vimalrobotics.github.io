@@ -21,5 +21,3 @@ The system supported both manual remote control and autonomous tracking modes.
 - Reactive control systems
 - Sensor noise handling
 - State-based mode management
-
-ult_bot_hand_tracking_back

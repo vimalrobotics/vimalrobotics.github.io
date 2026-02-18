@@ -144,6 +144,11 @@ The controller aggregates **both wired and wireless sensor data**, processes raw
 
 ---
 
+## Real-Time Testing
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZQRPcVxeY9U?si=MJIT7eil_cu0E8lZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
 ## Key Learnings
 
 - Industrial robotics demands **robustness over elegance**
